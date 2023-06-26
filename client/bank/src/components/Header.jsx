@@ -2,9 +2,10 @@ import React, { useEffect, useState, useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { AuthContext } from '../AuthContext'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import logo from '../assets/logo4.png'
 import '../styles/components/Header.css'
-import DataLanguage from './DataLanguage'
 
 const Header = () => {
 
@@ -32,10 +33,9 @@ const Header = () => {
     .then(res => res.json())
     .then(data => {
       if(data.message === "Token have been cleared successfully!") {
-        if(isLogin) {
-          getLogin()
-        }
-        console.log("Token have been cleared successfully!");
+        
+        getLogin()
+        toast.success("You logged out successfully!")
       } else {
         alert('error')
       }
@@ -71,7 +71,16 @@ const Header = () => {
             Home
           </NavLink>
 
-          <NavLink className='headerLink' onClick={closeMenu}>Banking</NavLink>
+          <NavLink 
+            to='/banking' 
+            className='headerLink' 
+            onClick={closeMenu}
+            style={({ isActive }) => {
+              return { color: isActive ? "#309478" : "" };
+            }}
+          >
+            Banking
+          </NavLink>
 
           <NavLink 
             to='/about-us' 
@@ -97,13 +106,18 @@ const Header = () => {
 
         </div>
         {
-        isLogin 
-        ? 
-        <NavLink className="headerItem-logout" onClick={handleLogout}>Logout</NavLink>
-        :
-        <NavLink to='/login' className="headerItem" onClick={closeMenu}>Login</NavLink>
+          isLogin 
+          ? 
+          <NavLink 
+            className="headerItem-logout" 
+            onClick={handleLogout}
+            >
+            Logout
+          </NavLink>
+          :
+          <NavLink to='/login' className="headerItem" onClick={closeMenu}>Login</NavLink>
         }
-        <DataLanguage />
+        <ToastContainer />
       </div>
     </div>
   )

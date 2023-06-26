@@ -87,12 +87,6 @@ const styles = StyleSheet.create({
 
 const PdfDepositSlip = ({data}) => {
   const {values, months} = data
-  // useEffect(() => {
-  //   Object.keys(months).map((month, index) => {
-  //     console.log(month);
-  //     console.log(months[month]);
-  //   })
-  // }, [])
   return (
     <Document>
       <Page size="A4" style={styles.page}>

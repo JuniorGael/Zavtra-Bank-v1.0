@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {HiArrowSmRight} from 'react-icons/hi'
-// import homeBanner from '../assets/homeBanner2.jpg'
 import homeBanner from '../assets/bank2.png'
 import loan from '../assets/icon1.jpg'
 import bankWork from '../assets/bankWork.jpg'

@@ -17,17 +17,20 @@ import ViewerDebt from './pages/pdfViewer/ViewerDebt'
 import ViewerAgreement from './pages/pdfViewer/VewerAgreement'
 import ViewerSlip from './pages/pdfViewer/ViewerSlip'
 import ViewerDepositACA from './pages/pdfViewer/ViewerDepositACA'
+import Banking from './pages/Banking'
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path='/banking' element={<Banking />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/contact-us" element={<Contact />} />
       <Route path="/register" element={<Register />} />
       <Route path="/leadership" element={<Leadership />} />
       <Route path="/login" element={<Login />} />
       <Route path="/infoSecurity" element={<InfoSecurity />} />
+      <Route path='/forms' element={<Forms />} />
       <Route path="/debt" element={<DebtForm />} />
       <Route path='/deposit-aca' element={<DepositACAForm />} />
       <Route path='/agreement' element={<DepositAgreementForm />} />
@@ -36,7 +39,6 @@ const AppRoutes = () => {
       <Route path="/pdf-preview-agreement" element={<ViewerAgreement />} />
       <Route path="/pdf-preview-slip" element={<ViewerSlip />} />
       <Route path="/pdf-preview-aca" element={<ViewerDepositACA />} />
-      <Route path='forms' element={<Forms />} />
       <Route path="*" element={<Error404 />} />
     </Routes>
   );

@@ -1,22 +1,26 @@
 import { useNavigate } from 'react-router-dom'
 import '../styles/pages/DebtForm.css'
-import { downloadPdf } from '../utils/func'
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import { AuthContext } from '../AuthContext'
 import { useContext, useEffect } from 'react'
-import PdfDebt from '../components/PdfDebt'
 
 const DebtForm = () => {
+
+  
 
   const {isLogin, getLogin} = useContext(AuthContext)
 
   const navigate = useNavigate()
 
+
   useEffect(()=> {
-    getLogin()
+    if(!getLogin()) {
+      navigate('/login')
+    }
+
     if(!isLogin) navigate('/login')
 
-  }, [isLogin])
+  }, [])
 
   const onSubmit = async (values, actions) => {
     actions.resetForm()
@@ -69,6 +73,7 @@ const DebtForm = () => {
               dateAmountBorrower: '',
             }
           }
+          
           onSubmit={onSubmit}
         >
           {() => (
@@ -345,10 +350,8 @@ const DebtForm = () => {
               <span>The Witness</span>
             </div>
 
-            {/* <button type='submit' className='formBtn'>Consulter en PDF</button> */}
             <div className="btnContainer">
               <button type='submit' className='btn formBtn'>Consulter en PDF</button>
-              <button type='button' onClick={() => downloadPdf(<PdfDebt />, "formulaire")} className='btn'>Telecharger en PDF</button>
             </div>
           </Form>
           )}

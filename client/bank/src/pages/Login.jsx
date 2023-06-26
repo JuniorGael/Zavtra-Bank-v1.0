@@ -3,13 +3,13 @@ import {useNavigate} from 'react-router-dom'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {FaFacebook, FaGooglePlus, FaGithub, FaInstagram, FaUserAlt, FaLock} from 'react-icons/fa'
-import '../styles/pages/Login.css'
-import {lang} from '../components/DataLanguage'
-import { Link } from 'react-router-dom'
 import { AuthContext } from '../AuthContext'
+import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../styles/pages/Login.css'
 
 const Login = () => {
-  console.log(lang["login"]);
   const { getLogin } = useContext(AuthContext);
   
 
@@ -46,8 +46,9 @@ const Login = () => {
       if(data.message === "Logged in!") {
         getLogin()
         navigate('/')
+        toast.success(data.message)
       } else {
-        alert (data.error)
+        toast.error(data.error)
       }
     })
     .catch((err) => console.log("Not logged!"))
@@ -57,9 +58,7 @@ const Login = () => {
     <div className='login'>
       <div className="loginContainer">
         <div className="leftSide">
-          {/* <div className="leftSideText"> */}
-            <span className="leftSideBankSlogan">BANK OF TODAY<br/> AND TOMORROW</span>
-          {/* </div> */}
+          <span className="leftSideBankSlogan">BANK OF TODAY<br/> AND TOMORROW</span>
         </div>
 
         <div className="rightSide">
@@ -117,9 +116,7 @@ const Login = () => {
                 <div className="rightSideField">
                   
                   <button className="rightSideBtn rightSideFieldControl" type='submit'>
-                    {
-                      lang["login"]
-                    }
+                    Login
                   </button>
                 </div>
                 
@@ -140,6 +137,7 @@ const Login = () => {
             )}
             
           </Formik>
+          <ToastContainer />
         </div>
       </div>
     </div>

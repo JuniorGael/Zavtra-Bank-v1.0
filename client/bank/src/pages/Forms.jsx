@@ -1,15 +1,12 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import '../styles/pages/Forms.css'
-import { Link, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../AuthContext'
+import { Link } from 'react-router-dom'
 
 const Forms = () => {
   
   return (
     <div className='forms'>
-      {/* <section className="formsheading"> */}
-        <h1 className="formsTitle">Zavtra Bank Forms</h1>
-      {/* </section> */}
+      <h1 className="formsTitle">Zavtra Bank Forms</h1>
 
       <section className="Wrapper">
         <div className="wrapperHeading">

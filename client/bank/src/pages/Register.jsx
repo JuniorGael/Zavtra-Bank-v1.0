@@ -181,9 +181,7 @@ const Register = () => {
         </div>
 
         <div className="registerRight">
-          {/* <div className="registerRightText"> */}
-            <span className="registerRightBankSlogan">BANK OF TODAY<br/> AND TOMORROW</span>
-          {/* </div> */}
+          <span className="registerRightBankSlogan">BANK OF TODAY<br/> AND TOMORROW</span>
         </div>
       </div>
     </div>
