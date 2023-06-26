@@ -1,0 +1,75 @@
+.slipForm {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(15, auto);
+}
+
+.titleWrapper {
+  grid-area: 1 / 1 / span 1 / span 6;
+  text-align: center;
+  padding-block: 10px;
+}
+
+.slipForm label {
+  white-space: nowrap;
+}
+
+.slipForm .date {
+  grid-area: 2 / 1 / span 1 / span 6;
+  padding-block: 10px;
+}
+
+.slipForm .account {
+  grid-area: 3 / 1 / span 1 / span 5;
+  padding-block: 10px;
+}
+
+.slipForm .address {
+  grid-area: 4 / 1 / span 1 / span 5;
+  padding-block: 10px;
+}
+.slipForm .month {
+  grid-area: 5 / 1 / span 1 / span 5;
+  padding-block: 10px;
+}
+
+.slipForm .submit {
+  grid-area: 5 / 4 / span 1 / span 5;
+  width: 30%;
+  padding: 5px;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.slipForm .table {
+  grid-area: 6 / 1 / span 1 / span 6;
+  padding-block: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .slipForm .date {
+    grid-area: 2 / 1 / span 1 / span 6;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slipForm .account {
+    grid-area: 3 / 1 / span 1 / span 6;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slipForm .address {
+    grid-area: 4 / 1 / span 1 / span 6;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}

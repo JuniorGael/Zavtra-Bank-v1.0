@@ -1,0 +1,67 @@
+.error404Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+  color: green;
+}
+
+.error404-titles {
+  text-align: center;
+}
+
+.errorTitle {
+  font-size: 288px;
+  font-weight: 600;
+  font-style: normal;
+  /* color: var(--primaryColor); */
+}
+
+.errorTxt {
+  font-size: 26px;
+  font-weight: 500;
+  /* color: var(--primaryColor); */
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  flex-wrap: wrap;
+}
+
+.backToHome {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 60px;
+  color: var(--primaryColor);
+  font-style: normal;
+  cursor: pointer;
+}
+.backToHome:hover {
+  /* color: var(--backToHomeLinkColor); */
+  padding: 10px 15px;
+  background-color: skyblue;
+  transition: all .44s ease-in;
+  color: #252b37;
+  /* opacity: 0.4; */
+}
+
+@media screen and (max-width: 600px) {
+  .errorTitle {
+    font-size: 130px;
+    margin-top: 110px;
+  }
+
+  .errorTxt {
+    font-size: 14px;
+  }
+
+  .backToHome {
+    font-size: 14px;
+    margin-bottom: 170px;
+  }
+}

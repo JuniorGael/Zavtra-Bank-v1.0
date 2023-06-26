@@ -1,0 +1,40 @@
+export const data = [
+  {
+    id: '1',
+    title: "Phishing",
+    content: 'Phishing is a very common Internet scam technique. It consists, most of the time, in sending a fraudulent email pretending to be a recognized organization (bank, taxes, social security, telecom operators, streaming services, delivery services, etc.) in order to obtain confidential information. (usually bank details).',
+    heading1: 'How to identify a phishing email?',
+    list1: 'Pay attention to signs of inconsistency, spelling mistakes (although they are not systematic!) or syntax errors...',
+    list2: 'Carefully read the e-mail addresses (sender and those communicated in the body of the email) which are often close to a letter close to the real addresses of companies, authorities...',
+    list3: 'Pay attention to the presence of a link: systematically check the destination address of the links by hovering your mouse.',
+    text: 'If in doubt,',
+    strong: ' contact your usual contact at Zavtra Bank.',
+    heading2: 'What to do in case of suspicious email?',
+    list4: 'Do not click on links.',
+    list5: "Don't answer.",
+  }, 
+  {
+    id: '2',
+    title: 'Vishing',
+    content: 'Vishing, or phishing by telephone, is a telephone scam often using social engineering techniques (identity theft of recognized organizations such as tax authorities, social security, telecom operators, etc.) which aims to make fraudulent operations or to extract sensitive information (bank identifiers, bank card code, personal information, etc.). The purpose is identical to the phishing technique, which consists of sending fraudulent emails.',
+    heading1: 'How to spot a vishing scam',
+    list1: "The caller claims to represent the IRS, Medicare, or the Social Security Administration. Unless you've requested contact, none of these federal agencies will ever initiate contact with you by email, text messages, or social media channels to request personal or financial information. In fact, be skeptical of anyone who calls you with an offer.",
+    list2: "There's a frantic sense of urgency. Scammers will try to tap into your sense of fear, using threats of arrest warrants and problems with your account. If you get one of these phone calls, remain calm and never give out your own information. Hang up and do your own investigation.",
+    list3: "The caller asks for your information. They may ask you to confirm your name, address, birth date, Social Security number, bank account info, and other identifying details. To trick you into thinking they're legit, they may even have some of this info on hand. The goal is to get the remaining info that they don't have yet.",
+    heading2: 'What to do in the face of a “vishing” attempt?',
+    list4: 'If a message asks you to call such a number, do not dial it.',
+    list5: "In addition, you should know that Zavtra Bank will never ask you by e-mail, fax or telephone for your bank details, codes or passwords."
+  }, 
+  {
+    id: '3',
+    title: 'Spoofing',
+    content: "Spoofing is the action of impersonating a company, brand or trustworthy person in order to deceive the user in order to extract information from him. For example, fraudsters can display email addresses, phone numbers of the usurped company / brand / trusted person. Fraudsters can display a Societe Generale employee number to have you validate fraudulent transactions.",
+    heading1: "How to stop email spoofing",
+    list1: "Use throwaway email accounts when registering for sites. This reduces the risk of your private email address appearing in lists used for sending spoofed email messages in bulk.",
+    list2: "Make sure your email password is strong and complex. A strong password makes it harder for criminals to access your account and use it to send malicious emails from your account.",
+    list3: "If you can, inspect the email header. (This will depend on the email service you are using and will only work on desktop.) The email header contains metadata on how the email was routed to you and where it came from.",
+    heading2: "How to prevent spoofing",
+    list4: "Use strong passwords. A strong password is not easy to guess and ideally made up of a combination of upper- and lower-case letters, special characters, and numbers. Avoid using the same password across the board and change your password regularly. A password manager tool is an excellent way to manage your passwords.",
+    list5: "Don’t give out personal information online. Avoid disclosing personal and private information online unless you are 100% sure it is a trusted source.",
+  }
+]

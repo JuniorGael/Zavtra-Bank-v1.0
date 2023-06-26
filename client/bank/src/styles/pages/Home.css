@@ -1,0 +1,626 @@
+.home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+  .homeBanner {
+    display: flex;
+    flex-direction: column;
+    color: var(--white-color);
+    position: relative;
+  }
+  
+  .homeBannerImg {
+  max-height: 600px;        
+  }
+
+.bannerText {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  
+  .bannerTitle {
+    color: var(--secondary2-color);
+    /* color: #fec739; */
+    font-size: clamp(100px, 20vw, 90px);
+    /* font-size: 100px; */
+    line-height: 0.9;
+    margin-bottom: 70px;
+}
+
+.bannerDesc {
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--black-color);
+}
+
+.bannerBtn {
+  font-weight: 600;
+  background: var(--black-color);
+  padding: 20px 60px;
+  font-size: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--white-color);
+  border: none;
+}
+
+/* ========================================================= */
+
+.loans {
+    margin-top: 70px;
+    display: flex;
+}
+
+.loansItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loansItemImg {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+.loansItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+
+.loansTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.loansDesc {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* ============================================================= */
+
+.bankProcedure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.bankProcedureBgTitle {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--graylight-color);
+    color: var(--secondary2-color);
+    margin-bottom: 30px;
+
+}
+
+.bankProcedureTitle {
+    font-size: 70px;
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    margin-top: 40px;
+}
+
+.bankProcedureWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.bankProcedureImg {
+  max-width: 500px;
+  height: 100%;
+}
+
+.bankProcedureText {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.bankprocedureItems {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrowContainer {
+    display: flex;
+    font-size: 18px;
+}
+
+
+.bankprocedureDesc {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.linkTo {
+    color: var(--secondary3-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =============================================================== */
+
+.homePresentation {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.authorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.authorQuote {
+    max-width: 400px;
+    font-size: 16px;
+    font-weight: normal;
+    border: 2px solid var(--tertiary-color);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.authorQuote::before {
+  content: '"';
+  font-weight: 500;
+  font-size: 20px;
+  padding-right: 3px;
+}
+
+.authorQuote::after {
+  content: '"';
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 3px;
+}
+
+.homeAuthorDesc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: normal;
+}
+
+.authorImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.teamQuote {
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+}
+
+.teamQuoteDesc {
+    font-size: 24px;
+    font-weight: 400;
+    border-top: 2px solid var(--black-color);
+    border-bottom: 2px solid var(--black-color);
+    text-align: center;
+    padding: 10px;
+}
+
+/* =================Responsives=============================== */
+
+@media screen and (max-width: 550px) {
+  
+  .bannerText {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+  }
+
+  .bannerTitle {
+    font-size: clamp(20px, 6vw, 40px);
+    margin-bottom: 10px;
+  }
+
+  .bannerDesc {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .bannerBtn {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: normal;
+  }
+
+/* ================================================== */
+
+  .loans {
+    padding: 15px;
+    flex-direction: column;
+  }
+  
+  .loansItems {
+    margin-bottom: 15px;
+  }
+
+  .loansItemImg {
+    margin-bottom: 5px;
+  }
+
+  .loansItem {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .loansTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .loansDesc {
+    font-size: 14px;
+  }
+
+  /* =========================================================== */
+
+  .bankProcedure {
+    margin-top: 20px;
+  }
+
+  .bankProcedureBgTitle {
+    margin-bottom: 0;
+  }
+
+  .bankProcedureTitle {
+    font-size: 35px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* =========================================================== */
+
+  .container {
+    margin-top: 10px;
+  }
+
+  .bankProcedureWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bankProcedureText {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .bankprocedureDesc {
+    font-size: clamp(14px, 5vw, 16px);
+  }
+
+  /* =========================================================== */
+
+  .authorContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .authorQuote {
+    font-size: clamp(14px, 6vw, 16px);
+  }
+
+  .homeAuthorDesc {
+    gap: 5px;
+  }
+
+  .authorImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .authorName {
+    font-size: 16px;
+  }
+
+  .authorFct, .authorMail {
+    font-size: 14px;
+  }
+
+  /* ===================================================== */
+  .teamQuote {
+    margin: 35px;
+  }
+
+  .teamQuoteDesc {
+    font-size: clamp(14px, 6vw, 16px);
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
+
+  .bannerText {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+  }
+
+  .bannerTitle {
+    font-size: 45px;
+    margin-bottom: 15px;
+  }
+
+  .bannerDesc {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .bannerBtn {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+/* ================================================== */
+
+  .loans {
+    padding: 15px;
+    flex-direction: column;
+  }
+  
+  .loansItems {
+    margin-bottom: 15px;
+  }
+
+  .loansItemImg {
+    margin-bottom: 5px;
+  }
+
+  .loansItem {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .loansTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .loansDesc {
+    font-size: 14px;
+  }
+
+  /* =========================================================== */
+
+  .bankProcedure {
+    margin-top: 20px;
+  }
+
+  .bankProcedureBgTitle {
+    margin-bottom: 0;
+  }
+
+  .bankProcedureTitle {
+    font-size: 35px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* =========================================================== */
+
+  .container {
+    margin-top: 10px;
+  }
+
+  .bankProcedureWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bankProcedureText {
+    gap: 10px;
+    padding: 8px;
+  }
+
+  .bankprocedureDesc {
+    font-size: clamp(14px, 5vw, 16px);
+  }
+
+  /* =========================================================== */
+
+  .authorContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .authorQuote {
+    font-size: 14px;
+    font-size: clamp(14px, 6vw, 16px);
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .homeAuthorDesc {
+    gap: 5px;
+  }
+
+  .authorImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .authorName {
+    font-size: 16px;
+  }
+
+  .authorFct, .authorMail {
+    font-size: 14px;
+  }
+
+  /* ===================================================== */
+  .teamQuote {
+    margin: 35px;
+  }
+
+  .teamQuoteDesc {
+    font-size: clamp(14px, 6vw, 16px);
+  }
+  
+}
+
+
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+
+  .bannerText {
+    margin-top: 80px;
+    left: 5%;
+  }
+
+  .bannerTitle {
+    font-size: clamp(55px, 10vw, 45px);
+    margin-bottom: 20px;
+  }
+
+  .bannerDesc {
+    font-size: 16px;
+  }
+
+  .bannerBtn {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+/* ================================================== */
+
+  .loans {
+    flex-wrap: wrap;
+  }
+
+  .loansItems {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+
+  .loansItem {
+    width: 70%;
+  }
+
+  /* =========================================================== */
+
+  .bankProcedure {
+    margin-top: 20px;
+  }
+
+  .bankProcedureBgTitle {
+    margin-bottom: 0;
+  }
+
+  .bankProcedureTitle {
+    font-size: 45px;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* =========================================================== */
+
+  .container {
+    margin-top: 10px;
+  }
+
+  .bankProcedureWrapper {
+    /* flex-direction: column; */
+    gap: 15px;
+  }
+
+  .bankProcedureText {
+    gap: 10px;
+  }
+
+  .bankprocedureDesc {
+    font-size: clamp(15px, 10vw, 16px);
+  }
+
+  /* =========================================================== */
+
+  .authorContainer {
+    flex-direction: row;
+    margin: 10px;
+  }
+
+  .authorQuote {
+    width: 50%;
+    font-size: 15px;
+    font-size: clamp(15px, 10vw, 16px);
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  .homeAuthorDesc {
+    gap: 5px;
+  }
+
+  .authorImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  .authorName {
+    font-size: 16px;
+  }
+
+  .authorFct, .authorMail {
+    font-size: 14px;
+  }
+
+  /* ===================================================== */
+
+  .teamQuoteDesc {
+    font-size: clamp(15px, 10vw, 16px);
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1400px) {
+
+  .bannerText {
+    top: 30%;
+    left: 5%;
+  }
+
+  .bannerTitle {
+    font-size: 75px;
+    margin-bottom: 35px;
+  }
+
+  .loansTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .bankProcedureBgTitle {
+    text-align: center;
+  }
+}

@@ -1,0 +1,130 @@
+/* .forms {
+  width: 100%;
+} */
+
+
+.formsTitle {
+  margin-top: 40px;
+  font-size: 70px;
+  text-align: center;
+}
+
+.wrapperHeading {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  text-align: center;
+  margin: 20px;
+}
+
+.wrapperHeadingTitle {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.wrapperHeadingDesc {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+.formsLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 1280px;
+  margin: 30px auto;
+}
+
+.depositTitle {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.depositDesc {
+  font-size: 18px;
+  padding: 15px;
+  font-weight: normal;
+}
+
+.linksContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  font-size: 20px;
+  gap: 10px;
+  padding-left: 15px;
+}
+
+.depositLink {
+  color: var(--secondary3-color);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.debtLink {
+  color: var(--secondary3-color);
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 20px;
+  padding-left: 15px;
+}
+
+.noteDesc {
+  font-size: 16px;
+  align-self: flex-end;
+  font-weight: normal;
+  padding-left: 15px;
+}
+
+.noteLink {
+  color: var(--secondary3-color);
+  text-decoration: underline;
+  padding-left: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  
+  .formsTitle {
+    font-size: 30px;
+    margin-top: 25px;
+    line-height: 60px;
+    
+  }
+
+  .wrapperHeadingTitle {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .wrapperHeadingDesc {
+    font-size: 18px;
+  }
+  
+  .depositTitle {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .depositDesc {
+    font-size: 14px;
+  }
+
+  .depositLink, .debtLink {
+    font-size: 16px;
+  }
+
+  .noteDesc {
+    padding-left: 15px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1300px) {
+  .noteDesc {
+    padding-right: 15px;
+  }
+
+  .depositWrapper {
+    padding-left: 30px;
+  }
+}

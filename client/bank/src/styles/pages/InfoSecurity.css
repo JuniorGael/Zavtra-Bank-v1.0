@@ -1,0 +1,54 @@
+.infoSecurity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    position: relative;
+}
+
+.bannerImg {
+    height: 600px;
+}
+
+.bannertitle {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    font-size: 70px;
+    line-height: 70px;
+    color: var(--white-color);
+}
+
+/* ======================================================== */
+
+.infoSecurityWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.infoTitle {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .bannertitle {
+    font-size: 45px;
+    left: 15px;
+    bottom: 20px;
+    line-height: 50px;
+  }
+
+  .infoTitle {
+    font-size: 25px;
+    margin-top: 10px;
+    padding: 10px;
+  }
+}
+

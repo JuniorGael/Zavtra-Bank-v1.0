@@ -1,0 +1,85 @@
+.agreementWrapperForm {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(15, auto);
+}
+
+.depositTitles {
+  grid-area: 1 / 1 / span 1 / span 5;
+  text-align: center;
+}
+
+.agreementWrapperForm label {
+  white-space: nowrap;
+}
+
+.agreementWrapperForm .receiver {
+  grid-area: 2 / 1 / span 1 / span 6;
+}
+
+.agreementWrapperForm .donor {
+  grid-area: 3 / 1 / span 1 / span 5;
+}
+
+.agreementWrapperForm .donorAmount {
+  grid-area: 4 / 1 / span 1 / span 3;
+}
+
+.agreementWrapperForm .depositAccount {
+  grid-area: 5 / 1 / span 1 / span 4;
+}
+
+.agreementWrapperForm .depositAddress {
+  grid-area: 6 / 1 / span 1 / span 5;
+}
+
+.agreementWrapperForm .apply {
+  grid-area: 7 / 1 / span 1 / span 6;
+}
+
+.agreementWrapperForm .notice {
+  grid-area: 8 / 1 / span 1 / span 6;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .doctitle {
+    font-size: 20px;
+  }
+
+  .agreementWrapperForm .receiver {
+    grid-area: 2 / 1 / span 1 / span 6;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .agreementWrapperForm .donor {
+    grid-area: 3 / 1 / span 1 / span 6;
+    display: flex;
+      flex-direction: column;
+  }
+
+  .agreementWrapperForm .donorAmount {
+    grid-area: 4 / 1 / span 1 / span 6;
+  }
+
+  .agreementWrapperForm .depositAccount {
+    grid-area: 5 / 1 / span 1 / span 6;
+    display: flex;
+      flex-direction: column;
+  }
+
+  .agreementWrapperForm .depositAddress {
+    grid-area: 6 / 1 / span 1 / span 6;
+    display: flex;
+      flex-direction: column;
+  }
+
+  .applySecurityWrapper {
+    flex-direction: column;
+    font-weight: normal;
+  }
+}

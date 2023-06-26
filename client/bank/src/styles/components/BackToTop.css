@@ -1,0 +1,15 @@
+.scrollBtn {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .scrollBtn {
+    display: flex;
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    color: var(--secondary3-color);
+    font-size: 40px;
+    cursor: pointer;
+  }
+}
