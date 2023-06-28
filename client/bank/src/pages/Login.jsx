@@ -9,11 +9,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/pages/Login.css'
 
-const Login = () => {
-  const { getLogin } = useContext(AuthContext);
-  
+document.title = "Login - Zavtra Bank";
 
-  document.title = 'Login - Zavtra Bank';
+const Login = () => {
+  const { checkIsLogin } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -27,31 +26,29 @@ const Login = () => {
     password: Yup.string().min(7, "minimum character should be 7").max(20).required('Password is required')
   })
 
-  const onSubmit = async (values, props) => {
-    props.resetForm()
+  const onSubmit = async (values) => {
 
-    const validateFormData = await loginSchema.validate(values, {abortEarly: false})
+    try {
+      const response = await fetch("http://localhost:5174/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(values),
+      });
 
-
-    fetch('http://localhost:5174/login', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: 'include',
-      body: JSON.stringify(validateFormData),
-    })
-    .then((res) => res.json())
-    .then((data) => {
-      if(data.message === "Logged in!") {
-        getLogin()
+      const data = await response.json()
+      if(data.userId) {
+        checkIsLogin()
         navigate('/')
         toast.success(data.message)
       } else {
         toast.error(data.error)
       }
-    })
-    .catch((err) => console.log("Not logged!"))
+    } catch (error) {
+      console.log("Impossible de connecter l'utilisateur ", error)
+    }
   }
 
   return (

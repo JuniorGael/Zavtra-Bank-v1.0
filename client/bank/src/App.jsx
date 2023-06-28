@@ -9,6 +9,7 @@ import BackToTop from './components/BackToTop'
 function App() {
 
   return (
+    <>
     <AuthProvider>
       <Header />
       <main className='main'>
@@ -17,6 +18,7 @@ function App() {
       <Footer />
       <BackToTop/>
     </AuthProvider>
+    </>
   )
 }
 

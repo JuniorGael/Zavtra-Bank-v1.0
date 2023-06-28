@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import { AuthContext } from '../AuthContext'
 import { ToastContainer, toast } from 'react-toastify';
@@ -9,9 +9,11 @@ import '../styles/components/Header.css'
 
 const Header = () => {
 
+  const navigate = useNavigate()
+
   const [isOpen, setIsOpen] = useState(false)
 
-  const { isLogin, getLogin } = useContext(AuthContext);
+  const { isLogin, checkIsLogin } = useContext(AuthContext);
 
 
   const handleClick = () => {
@@ -23,6 +25,7 @@ const Header = () => {
   }
 
   const handleLogout = () => {
+    closeMenu()
     fetch('http://localhost:5174/logout', {
       method: "POST",
       headers: {
@@ -32,9 +35,11 @@ const Header = () => {
     })
     .then(res => res.json())
     .then(data => {
-      if(data.message === "Token have been cleared successfully!") {
-        
-        getLogin()
+      if(data) {
+        checkIsLogin();
+        if(!isLogin) {
+          navigate('/')
+        }
         toast.success("You logged out successfully!")
       } else {
         alert('error')
@@ -44,7 +49,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-      getLogin()
+    checkIsLogin();
   }, [])
 
   return (

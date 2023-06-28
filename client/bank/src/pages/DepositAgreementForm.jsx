@@ -6,14 +6,13 @@ import { AuthContext } from '../AuthContext'
 
 const DepositAgreementForm = () => {
 
-  const {isLogin, getLogin} = useContext(AuthContext)
+  const {isLogin, checkIsLogin} = useContext(AuthContext)
 
   const navigate = useNavigate()
 
   useEffect(()=> {
-    getLogin()
+    checkIsLogin();
     if(!isLogin) navigate('/login')
-
   }, [isLogin])
 
   const onsubmit = async (values, actions) => {

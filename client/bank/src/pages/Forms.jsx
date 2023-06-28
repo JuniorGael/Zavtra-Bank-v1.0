@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import '../styles/pages/Forms.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../AuthContext'
 
 const Forms = () => {
-  
+
+  const navigate = useNavigate()
+
+  const { isLogin } = useContext(AuthContext)
+
+  useEffect(() => {
+    if(!isLogin) {
+      navigate('/')
+    }
+  }, [isLogin])
+
   return (
     <div className='forms'>
       <h1 className="formsTitle">Zavtra Bank Forms</h1>

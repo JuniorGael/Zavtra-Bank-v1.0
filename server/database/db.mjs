@@ -6,34 +6,6 @@ dotenv.config({ path: "./.env" });
 // importer mysql2
 import mysql from "mysql2";
 
-// class Database {
-//   constructor() {
-//     if (!Database.instance) {
-//       Database.instance = this;
-//       Database.pool = mysql.createPool({
-//         host: process.env.DB_HOST,
-//         database: process.env.DB_DATABASE,
-//         user: process.env.DB_USER,
-//         password: process.env.DB_PASSWORD
-//       });
-//     }
-//     return Database.instance;
-//   }
-//   static connection() {
-//     return Database.pool;
-//   }
-//   getConnect() {
-//     return new Promise((resolve, reject) => {
-//       Database.pool.getConnection((err, connection) => {
-//         if (err) {
-//           reject(err);
-//         }
-//         resolve(connection);
-//       });
-//     });
-//   }
-// }
-
 // parametres de connexions a la bdd
 const mysql2Connection = mysql.createConnection({
   host: process.env.DB_HOST,

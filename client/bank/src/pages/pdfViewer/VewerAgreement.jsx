@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import { PDFViewer} from '@react-pdf/renderer'
 import PdfDepositAgreement from '../../components/PdfDepositAgreement';
+import DownloadPdfBtn from '../../components/DownloadPdfBtn';
 
 const ViewerAgreement = () => {
 

@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import { PDFViewer} from '@react-pdf/renderer'
 import PdfDepositSlip from '../../components/PdfDepositSlip';
+import DownloadPdfBtn from '../../components/DownloadPdfBtn';
 
 const ViewerSlip = () => {
 

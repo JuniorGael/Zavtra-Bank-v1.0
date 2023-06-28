@@ -5,11 +5,11 @@ dotenv.config({ path: "./.env" });
 
 import { validatePassword } from "../middlewares/password.mjs";
 
-import { signup, login, logout, auth } from "../controllers/users.mjs";
+import { signup, login, logout } from "../controllers/users.mjs";
 
 import { sendEmail } from "../controllers/emailController.mjs";
 
-import { langController } from "../controllers/langController.mjs";
+import auth from "../middlewares/auth.mjs";
 
 const router = new Router();
 
@@ -28,6 +28,6 @@ router.post("/register", validatePassword, signup);
 //http://localhost:5174/auth/logout
 router.post("/logout", logout);
 
-router.post("/getLang", langController)
+
 
 export default router;

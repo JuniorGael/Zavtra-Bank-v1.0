@@ -5,22 +5,14 @@ import { AuthContext } from '../AuthContext'
 import { useContext, useEffect } from 'react'
 
 const DebtForm = () => {
-
-  
-
-  const {isLogin, getLogin} = useContext(AuthContext)
-
+  const { isLogin, checkIsLogin } = useContext(AuthContext);
   const navigate = useNavigate()
 
 
   useEffect(()=> {
-    if(!getLogin()) {
-      navigate('/login')
-    }
-
-    if(!isLogin) navigate('/login')
-
-  }, [])
+      checkIsLogin()
+      if(!isLogin) navigate('/login')
+  }, [isLogin])
 
   const onSubmit = async (values, actions) => {
     actions.resetForm()

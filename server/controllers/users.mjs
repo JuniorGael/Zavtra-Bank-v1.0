@@ -7,7 +7,6 @@ import jwt from "jsonwebtoken";
 
 import db from "../database/db.mjs";
 
-
 export const signup = (req, res, next) => {
   const { username, email, password, policyTerms } = req.body;
   db.query("SELECT * FROM users WHERE email = ?", [email], (err, result) => {
@@ -51,7 +50,7 @@ export const signup = (req, res, next) => {
 export const login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
-    const [rows, fields] = await db
+    const [rows] = await db
       .promise()
       .query("SELECT * FROM users WHERE email = ?", [email]);
     if (rows.length === 0) {
@@ -73,46 +72,12 @@ export const login = async (req, res, next) => {
       { expiresIn: "24h" }
     );
     res.cookie("token", token);
-    console.log("TOKENLOGIN", token);
-
     return res.status(200).json({
-      message: "Logged in!",
-      token,
-      user: {
-        userId: rows[0].id,
-        email: rows[0].email,
-      },
+      token: token,
+      userId: rows[0].id,
     });
   } catch (error) {
-    console.error(error);
-    return res.status(500).json({
-      error: "Erreur serveur",
-    });
-  }
-};
-
-export const auth = (req, res) => {
-  try {
-    const token = req.cookies.token;
-
-    if (!token) {
-      return res.status(401).json({ message: "Unauthorized" });
-    }
-
-    const decodedToken = jwt.verify(token, `${process.env.JWT_KEY_TOKEN}`);
-
-    const id = decodedToken.userId;
-    console.log("idAUTH", id);
-    req.userId = id;
-
-    res.status(200).json({
-      message: "Authorized",
-    });
-  } catch (err) {
-    console.log(err);
-    return res.status(403).json({
-      error: "Your session is not valid!",
-    });
+    return res.status(500).json({ error });
   }
 };
 
@@ -122,4 +87,3 @@ export const logout = (req, res) => {
     message: "Token have been cleared successfully!",
   });
 };
-

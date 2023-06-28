@@ -4,7 +4,17 @@ const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [isLogin, setIsLogin] = useState(false);
-  const getLogin = async () => {
+
+  useEffect(() => {
+    // Vérifie si l'utilisateur est loggé au montage initial de l'application
+    checkIsLogin()
+  }, [])
+
+
+  /**
+   * fonction pour vérifier l'authentification de l'utilisateur côté client
+   */
+  const checkIsLogin = async () => {
     try {
       const response = await fetch("http://localhost:5174/auth", {
         method: "POST",
@@ -16,21 +26,18 @@ const AuthProvider = ({ children }) => {
 
       const data = await response.json();
 
-      if (data.message === "Authorized") {
+      if (data.userId) {
         setIsLogin(true);
-        return true;
       } else {
         setIsLogin(false);
-        return false;
-        
       }
     } catch (error) {
-      console.log(error);
+      console.log("Erreur lors de la vérification de l'authentification: ", error );
     }
   };
 
   return (
-    <AuthContext.Provider value={{ isLogin, getLogin }}>
+    <AuthContext.Provider value={{ isLogin, checkIsLogin }}>
       {children}
     </AuthContext.Provider>
   );

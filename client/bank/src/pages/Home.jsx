@@ -1,21 +1,24 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {HiArrowSmRight} from 'react-icons/hi'
+import { AuthContext } from '../AuthContext'
 import homeBanner from '../assets/bank2.png'
 import loan from '../assets/icon1.jpg'
 import bankWork from '../assets/bankWork.jpg'
 import author from '../assets/authorImg.jpeg'
 import '../styles/pages/Home.css'
-import { AuthContext } from '../AuthContext'
+
+document.title = 'Zavtra Bank - Together We Build Today and Tomorrow';
+
 
 const Home = () => {
-  document.title = 'Zavtra Bank - Together We Build Today and Tomorrow';
 
-  const {isLogin, getLogin} = useContext(AuthContext)
+  const {isLogin, checkIsLogin} = useContext(AuthContext)
+  
   const navigate = useNavigate()
 
   const handleFillForm = () => {
-    getLogin()
+    checkIsLogin();
     if(isLogin) {
       navigate('/forms')
     } else {

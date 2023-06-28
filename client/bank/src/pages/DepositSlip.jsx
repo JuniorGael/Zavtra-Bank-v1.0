@@ -6,14 +6,13 @@ import { AuthContext } from '../AuthContext'
 
 const DepositSlip = () => {
 
-  const {isLogin, getLogin} = useContext(AuthContext)
+  const { isLogin, checkIsLogin } = useContext(AuthContext);
 
   const navigate = useNavigate()
 
   useEffect(()=> {
-    getLogin()
+    checkIsLogin();
     if(!isLogin) navigate('/login')
-
   }, [isLogin])
 
   const [values, setValues] = useState({
@@ -24,7 +23,6 @@ const DepositSlip = () => {
     depositAddress: '',
     depositEmail: '',
       total: 0,
-    
   });
 
   const [months, setMonths] = useState({
