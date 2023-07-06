@@ -9,7 +9,6 @@
 .leadershipHeading {
   width: 90%;
   margin: auto;
-  /* margin: 0 65px; */
   display: flex;
   flex-direction: column;
 }

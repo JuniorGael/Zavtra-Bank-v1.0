@@ -126,6 +126,7 @@
 }
 .form .note {
   grid-area: 13 / 1 / span 1 / span 6;
+  font-weight: normal;
 }
 
 .field {
@@ -163,8 +164,8 @@
   font-weight: 600;
 }
 
-.form p {
-  text-align: justify;
+.policyTerms{
+  font-weight: normal;
 }
 /* ===================== DEBT ACKNOWLEDGMENT FIN =========================== */
 
@@ -364,7 +365,7 @@
 
   .form .terms {
     grid-area: 11 / 1 / span 1 / span 6;
-    text-align: justify;
+    font-size: 12.5px;
   }
 
   .form .amount-borrower {
@@ -374,6 +375,7 @@
   }
   .form .note {
     grid-area: 13 / 1 / span 1 / span 6;
+    font-size: 12.5px;
   }
 
   .authors {

@@ -81,7 +81,7 @@ const Register = () => {
                     Create Account
                   </h1>
                   <div className="registerLeftBankLogo">
-                    <img src={logo} aria-label="Bank logo" className='registerLeftLogo'/>
+                    <img src={logo} aria-label="Bank logo" className='registerLeftLogo'/>label 
                     <span className="registerLeftLogoTitle">Zavtra Bank</span>
                   </div>
                 </legend>
@@ -148,14 +148,14 @@ const Register = () => {
                 </div>
 
                 <div className="registerLeftPrivacyTerms">
-                  <legend className='registerLeftTermsText'>
+                  <label aria-label='checkbox' className='registerLeftTermsText'>
                     I accept the Terms of Use & Privacy Policy
                     <Field 
                       type='checkbox' 
                       name='policyTerms' 
                       className='checkboxForm'
                     />
-                  </legend>
+                  </label>
                   <ErrorMessage 
                     component='label' 
                     className='formLabel text-danger' 

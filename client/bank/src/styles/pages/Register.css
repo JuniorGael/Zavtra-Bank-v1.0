@@ -35,7 +35,7 @@
 .registerLeftProfileLogo {
     font-size: 50px;
     font-weight: 300;
-    color: var(--secondary3-color);
+    color: var(--secondary2-color);
 }
 
 .registerLeftTitle {
@@ -79,7 +79,7 @@
     padding-left: 5px;
     border-radius: 10px;
     background: transparent;
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--secondary2-color);
 }
 
 .registerLeftControl:focus {
@@ -122,12 +122,12 @@
     font-weight: 500;
     font-size: 20px;
     color: var(--white-color);
-    background-color: var(--secondary-color);
+    background-color: var(--secondary2-color);
     cursor: pointer;
 }
 
 .Btn:hover {
-    color: var(--secondary-color);
+    color: var(--secondary2-color);
     background-color: var(--white-color);
 }
 
@@ -141,7 +141,7 @@
 }
 
 .loginHere:hover {
-    color: var(--secondary-color);
+    color: var(--secondary2-color);
     text-decoration: underline;
 }
 

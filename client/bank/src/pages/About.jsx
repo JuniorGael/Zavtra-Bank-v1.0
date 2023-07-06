@@ -18,9 +18,7 @@ const About = () => {
               We help aspiring people and businesses around the world save, spend, and transfer money— empowering more prosperous financial futures for their family, friends, and communities across borders.
             </p>
           </div>
-          <button className="aboutLeadershipBtn">
-            <Link to='/leadership' className='aboutLeadership'>Leadership</Link>
-          </button>
+          <Link to='/leadership' className='aboutLeadership'>Leadership</Link>
         </div>
         <div className="aboutTitleSpaceImage">
           <img src={aboutImg} aria-label="About image" />

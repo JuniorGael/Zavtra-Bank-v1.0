@@ -19,7 +19,7 @@ const Accordion = ({section, index}) => {
       }}
       >
         <div className="columnTitle">{section.title}</div>
-        <button className='expendableBtn'>
+        <button title='dropdown arrow ' className='expendableBtn'>
           <span className="material-symbols-outlined" style={{
             transform: `rotate(${isOpen ? 180 : 0}deg)`,
             transition:'all 0.3s',

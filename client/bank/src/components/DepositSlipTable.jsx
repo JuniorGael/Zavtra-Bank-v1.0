@@ -19,7 +19,7 @@ const DepositSlipTable = ({months, values, handleChange}) => {
             return(
               <tr key={index}>
                 <td>
-                  <p>{month}</p>
+                  <label aria-label='twelve months'>{month}</label>
                 </td>
                 <td>
                   <input 
@@ -29,6 +29,7 @@ const DepositSlipTable = ({months, values, handleChange}) => {
                     value={months[month]}
                     className='amountField'
                     onChange={handleChange}
+                    title='amount'
                   />
                 </td>
               </tr>
@@ -44,6 +45,7 @@ const DepositSlipTable = ({months, values, handleChange}) => {
               className='amountField'
               onChange={handleChange}
               readOnly
+              title='total amount'
             />
           </td>
         </tr>

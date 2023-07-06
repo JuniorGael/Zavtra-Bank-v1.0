@@ -127,6 +127,10 @@
   .menuLinks {
     gap: 20px;
   }
+
+  .headerLink {
+    font-size: 17px;
+  }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1200px) {
