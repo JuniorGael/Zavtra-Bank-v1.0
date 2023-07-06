@@ -5,82 +5,78 @@ import bcrypt from "bcryptjs";
 
 import jwt from "jsonwebtoken";
 
-import db from "../database/db.mjs";
+import { dbQuery } from "../database/sqlite/config.mjs";
 
 /**
- * 
- * @param {*} req 
- * @param {*} res 
- * @param {*} next 
+ *
+ * @param {*} req
+ * @param {*} res
+ * @param {*} next
  */
 
-export const signup = (req, res, next) => {
-  const { username, email, password, policyTerms } = req.body;
-  db.query("SELECT * FROM users WHERE email = ?", [email], (err, result) => {
-    if (err)
-      res.status(500).json({
-        error: "erreur serveur",
-      });
+export const signup = async (req, res) => {
+  try {
+    const { username, email, password, policyTerms } = req.body;
 
-    if (result.length > 0) {
-      // error
+    const user = await dbQuery("SELECT * FROM users WHERE email = ?", [email]);
+    if (user[0]) {
       return res.status(400).json({
-        message: "This username is already exist!",
+        message: "This user is already exist!",
       });
     }
-    // user not use
-    bcrypt.hash(password, 10, (err, hash) => {
-      if (err) {
-        return res.status(500).json({
-          error: "erreur serveur hash",
-        });
-      } else {
-        db.query(
-          "INSERT INTO users (username, email, password, policy_terms) VALUES(?, ?, ?, ?)",
-          [username, email, hash, policyTerms],
-          (err) => {
-            if (err) {
-              return res.status(500).json({
-                error: "error serveur insert",
-              });
-            }
-            return res.status(201).json({
-              message: "Registration successful!",
-            });
-          }
-        );
-      }
+
+    const hashedPassword = await new Promise((resolve, reject) => {
+      bcrypt.hash(password, 10, (err, hash) => {
+        if (err) reject(err);
+        resolve(hash);
+      });
     });
-  });
+
+    const response = await dbQuery(
+      "INSERT INTO users (username, email, password, policy_terms) VALUES(?, ?, ?, ?)",
+      [username, email, hashedPassword, policyTerms]
+    );
+
+    if (response) {
+      return res.status(201).json({
+        message: "Registration successful!",
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ error: err.message });
+  }
 };
 
-export const login = async (req, res, next) => {
+export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const [rows] = await db
-      .promise()
-      .query("SELECT * FROM users WHERE email = ?", [email]);
+    const rows = await dbQuery("SELECT * FROM users WHERE email = ?", [email]);
     if (rows.length === 0) {
-      return res.status(401).json({
-        message: "User does not exist!",
+      return res.status(400).json({
+        message: "Invalid credentials",
       });
     }
+
     const bcryptResult = await bcrypt.compare(password, rows[0].password);
     if (!bcryptResult) {
-      return res.status(401).json({
-        error: "Password invalid!",
+      return res.status(400).json({
+        error: "Invalid credentials",
       });
     }
+
     const token = jwt.sign(
       {
         userId: rows[0].id,
       },
       process.env.JWT_KEY_TOKEN,
-      { 
-        expiresIn: process.env.EXPIRES_IN
+      {
+        expiresIn: process.env.EXPIRES_IN,
       }
     );
+
     res.cookie("token", token);
+
     return res.status(200).json({
       token: token,
       userId: rows[0].id,
@@ -90,7 +86,7 @@ export const login = async (req, res, next) => {
   }
 };
 
-export const logout = (req, res) => {
+export const logout = (_, res) => {
   res.clearCookie("token");
   return res.status(200).json({
     message: "Token have been cleared successfully!",
