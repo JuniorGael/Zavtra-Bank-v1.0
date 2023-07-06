@@ -4,19 +4,19 @@
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
-  src: url(fonts/Poppins-Regular.ttf) format("truetype");
+  src: url("assets/fonts/Poppins-Regular.ttf") format("truetype");
 }
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  src: url(fonts/Poppins-Medium.ttf) format("truetype");
+  src: url("assets/fonts/Poppins-Medium.ttf") format("truetype");
 }
 @font-face {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
-  src: url(fonts/Poppins-Bold.ttf) format("truetype");
+  src: url("assets/fonts/Poppins-Bold.ttf") format("truetype");
 }
 
 /* dbc0ad */
