@@ -2,7 +2,7 @@
 import Express from "express";
 
 // importer le package http de nodejs
-import http, { METHODS } from "http";
+import http from "http";
 
 import dotenv from "dotenv";
 
@@ -13,8 +13,17 @@ import cors from "cors";
 import usersRoutes from "./routes/users.mjs";
 
 import cookieParser from "cookie-parser";
+
+import * as path from 'path'
+
+import { fileURLToPath } from 'url'
+
 // importer le package pour utiliser les variables d'environnement
 dotenv.config({ path: "./.env" });
+
+// Fix for __dirname and __filename in ES6 modules.
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
 // importer l'appli app
 const app = Express();
@@ -38,6 +47,16 @@ app.use(cookieParser());
 app.use(morgan("dev"));
 
 app.use("/", usersRoutes);
+
+// Serve static files from the React app.
+app.use(Express.static(path.join(__dirname, 'client/dist')))
+
+// Resolve react-router issue.
+app.get('/public/*', (_, res) => {
+  res.sendFile(path.join(__dirname, 'client/dist/index.html'), (err) => {
+    if (err) res.status(500).json(err)
+  })
+})
 
 // la methode 'createServer()' prend en argument, la fonction qui sera appele a chaque requete recu par le serveur. Ici les fonctions seront dans 'app.js'
 const server = http.createServer(app);
