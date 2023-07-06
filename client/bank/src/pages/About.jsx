@@ -34,6 +34,7 @@ const About = () => {
             Founded in mid-2019, Zavtra  was primarily  a student organization that financially supported  students   who couldn’t meet up their financial obligation toward  University, from one university to another,  we found ourselves being the  “go to “ solution to many students and parents. After graduation leaders of the association back then with no previous  economics or finance background decided to pursue education in top tier universities around the world. Equipped with better knowledge of  financial industry and great understanding of  World Economics. we understood the need of reliable  Investment  Financial institution  in Africa particularly   where access to liquidity  remain a great concern to SMI & SME  therefore  we thought  of  being  the X-factor that will drive   access to capital to businesses  and provide   great  ROI  to our investors.
           </p>
         </section>
+          <div className="underline"></div>
 
         <section className="aboutMissions">
           <h2 className="aboutMissionsTitle">Our Missions</h2>

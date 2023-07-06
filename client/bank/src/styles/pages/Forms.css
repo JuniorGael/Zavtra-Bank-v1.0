@@ -1,6 +1,7 @@
-/* .forms {
+.forms {
   width: 100%;
-} */
+  text-align: justify;
+}
 
 
 .formsTitle {
@@ -56,28 +57,27 @@
 }
 
 .depositLink {
-  color: var(--secondary3-color);
+  color: var(--secondary2-color);
   cursor: pointer;
   text-decoration: underline;
 }
 
 .debtLink {
-  color: var(--secondary3-color);
+  color: var(--secondary2-color);
   cursor: pointer;
   text-decoration: underline;
   font-size: 20px;
   padding-left: 15px;
 }
 
-.noteDesc {
+.infoDesc {
+  margin-top: 40px;
   font-size: 16px;
-  align-self: flex-end;
   font-weight: normal;
-  padding-left: 15px;
 }
 
 .noteLink {
-  color: var(--secondary3-color);
+  color: var(--secondary2-color);
   text-decoration: underline;
   padding-left: 5px;
 }
@@ -107,21 +107,22 @@
 
   .depositDesc {
     font-size: 14px;
+    text-align: justify;
   }
 
   .depositLink, .debtLink {
     font-size: 16px;
   }
 
-  .noteDesc {
-    padding-left: 15px;
+  .infoDesc {
+    padding: 8px;
     font-size: 14px;
   }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1300px) {
-  .noteDesc {
-    padding-right: 15px;
+  .infoDesc {
+    padding-left: 20px;
   }
 
   .depositWrapper {

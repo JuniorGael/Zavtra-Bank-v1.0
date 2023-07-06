@@ -120,13 +120,14 @@ const Contact = () => {
                   as='textarea'
                   type='textarea'
                   name='message' 
-                  placeholder='message'
-                  className='fieldControl fieldMessage'
+                  placeholder='Message'
+                  className=' fieldMessage'
                 >
                   <textarea 
-                    type='text'
+                    type='textarea'
                     name="message" 
-                    placeholder='Message' className='fieldControl fieldMessage'>
+                    placeholder='Message'
+                    className='textarea'>
                   </textarea>
                 </Field>
                 <ErrorMessage 

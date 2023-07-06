@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "../styles/pages/Banking.css";
 
 const Banking = () => {
+  document.title = "Zavtra - Banking";
+
   return (
     <div className="banking">
       <h1 className="titleSection">Zavtra <span className="green">Banking</span></h1>

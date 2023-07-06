@@ -7,7 +7,7 @@ import {
   Font,
   Link,
 } from "@react-pdf/renderer";
-import logo from "../assets/logo_min.png";
+import logo from "../assets/logo4.png";
 
 Font.register({
   family: "Poppins",

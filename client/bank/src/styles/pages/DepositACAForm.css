@@ -2,12 +2,12 @@
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(15, auto);
+  grid-template-rows: repeat(17, auto);
+  padding-bottom: 60px;
 }
 
 .headerLogo {
   width: 50px;
-
 }
 
 .depositAccountWrapper {
@@ -40,26 +40,28 @@
 .depositAccountForm .noticeText {
   grid-area: 6 / 1 / span 1 / span 5;
 }
-
+.depositAccountForm .signatureWrapper {
+  grid-area: 7 / 1 / span 1 / span 5;
+}
 .text {
   padding: 15px 0;
 }
 
 .signatureWrapper {
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   align-self: flex-end;
-  gap: 50px;
+  gap: 20px;
   font-weight: 600;
   align-items: end;
 }
 
 @media screen and (max-width: 768px) {
-
   .formWrapper {
     margin-bottom: 20px;
   }
-  
+
   .depositAccountForm .date {
     grid-area: 2 / 1 / span 1 / span 6;
     display: flex;

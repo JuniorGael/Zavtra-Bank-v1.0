@@ -7,6 +7,13 @@ import jwt from "jsonwebtoken";
 
 import db from "../database/db.mjs";
 
+/**
+ * 
+ * @param {*} req 
+ * @param {*} res 
+ * @param {*} next 
+ */
+
 export const signup = (req, res, next) => {
   const { username, email, password, policyTerms } = req.body;
   db.query("SELECT * FROM users WHERE email = ?", [email], (err, result) => {
@@ -38,7 +45,7 @@ export const signup = (req, res, next) => {
               });
             }
             return res.status(201).json({
-              message: "Your registered!",
+              message: "Registration successful!",
             });
           }
         );
@@ -68,8 +75,10 @@ export const login = async (req, res, next) => {
       {
         userId: rows[0].id,
       },
-      `${process.env.JWT_KEY_TOKEN}`,
-      { expiresIn: "24h" }
+      process.env.JWT_KEY_TOKEN,
+      { 
+        expiresIn: process.env.EXPIRES_IN
+      }
     );
     res.cookie("token", token);
     return res.status(200).json({

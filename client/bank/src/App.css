@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 @font-face {
   font-family: "Poppins";
@@ -24,19 +24,18 @@
 :root {
   --backgroung-color: #fdfcfc;
   --backgroundForms-color: #ebece7;
-  --secondary-color: #1e8357;
-  --secondary2-color: #1d6a52;
-  --secondary3-color: #309478;
+  /* --secondary-color: #1e8357; */
+  --secondary2-color: #1d6a52; /* login*/
+  /* --secondary3-color: #309478;  */
   --black-color: #000;
   --white-color: #fff;
   --graylight-color: #cfd7dc;
-  --facebook-color: #3737f8;
-  --twitter-color: #87ceeb;
-  --instagram-color: #ff6060;
-  --linkedin-color: #6363f3;
+  --facebook-color: #1778f2;
+  --twitter-color: #1da1f2;
+  --instagram-color: #e1306c;
+  --linkedin-color: #0a66c2;
   --violet-color: #523faa;
 }
-
 
 .footerLogo {
   width: 50px;
@@ -46,7 +45,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   background-color: var(--backgroung-color);
 }
@@ -82,4 +81,21 @@ a {
   flex-direction: column;
   flex: 1 1;
   margin-inline: auto;
+}
+
+.formBtn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn {
+  padding: 15px;
+  font-size: 16px;
+  background: var(--secondary2-color);
+  color: var(--white-color);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }

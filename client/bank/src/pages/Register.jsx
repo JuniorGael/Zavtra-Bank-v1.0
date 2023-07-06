@@ -1,13 +1,16 @@
-import React from 'react'
+// import { useContext } from 'react'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {useNavigate} from 'react-router-dom'
 import {CgProfile} from 'react-icons/cg'
-import '../styles/pages/Register.css'
 import { Link } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import logo from '../assets/logo4.png'
+import 'react-toastify/dist/ReactToastify.css';
+import '../styles/pages/Register.css'
+
 
 const Register = () => {
-
   document.title = 'Registration - Zavtra Bank';
 
   const navigate = useNavigate();
@@ -28,29 +31,28 @@ const Register = () => {
     policyTerms: Yup.boolean().oneOf([true], 'Please accept the terms of service!')
   })
 
-  const onSubmit = async (values, actions) => {
-    actions.resetForm()
+  const onSubmit = async (values) => {
 
-    const validateFormData = await RegisterSchema.validate(values, {abortEarly: false})
+    try {
+      const responseRegister = await fetch('http://localhost:5174/register', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify(values),
+      })
 
-    fetch('http://localhost:5174/register', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(validateFormData),
-    })
-    .then((res) => res.json())
-    .then((data) => {
-      if(data.message === "Your registered!") {
+      const dataRegister = await responseRegister.json()
+      if(dataRegister.message === "Registration successful!") {
         navigate("/login");
+        toast.success(dataRegister.message)
       } else {
-        alert("error")
+        toast.error("Registration fails, please fill in all fields!!")
       }
-    })
-    .catch((err) => {
-      alert(err.message)
-    })
+    } catch (error) {
+      console.log("Registration impossible ", error);
+    }
   }
 
   return (
@@ -65,12 +67,8 @@ const Register = () => {
                 confirmPassword: '',
                 policyTerms: false
               }}
-              
-              
               validationSchema={RegisterSchema}
-
               onSubmit={onSubmit}
-            
           >
             {() => 
             (
@@ -83,7 +81,7 @@ const Register = () => {
                     Create Account
                   </h1>
                   <div className="registerLeftBankLogo">
-                    <img src="https://zavtrabank.com/wp-content/uploads/2022/06/logo_min.png" aria-label="Bank logo" className='registerLeftLogo'/>
+                    <img src={logo} aria-label="Bank logo" className='registerLeftLogo'/>
                     <span className="registerLeftLogoTitle">Zavtra Bank</span>
                   </div>
                 </legend>
@@ -183,6 +181,7 @@ const Register = () => {
         <div className="registerRight">
           <span className="registerRightBankSlogan">BANK OF TODAY<br/> AND TOMORROW</span>
         </div>
+        <ToastContainer />
       </div>
     </div>
   )

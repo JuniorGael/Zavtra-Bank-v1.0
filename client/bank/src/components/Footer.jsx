@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import '../styles/components/Footer.css'
+import { FaLinkedinIn, FaFacebookF } from 'react-icons/fa'
+import { AiOutlineTwitter, AiOutlineInstagram } from 'react-icons/ai'
 
 const Footer = () => {
 
@@ -24,10 +26,12 @@ const Footer = () => {
         </div>
         <div className="footerItems">
           <h3 className="footerContactTitle">Follow Us</h3>
-          <Link className="footerContactText smediaF">Facebook</Link>
-          <Link className="footerContactText smediaT">Twitter</Link>
-          <Link className="footerContactText smediaL">LinkedIn</Link>
-          <Link className="footerContactText smediaI">Instagram</Link>
+          <div className="icons">
+            <Link className="footerContactIcon smediaF"><FaFacebookF/></Link>
+            <Link className="footerContactIcon smediaT"><AiOutlineTwitter/></Link>
+            <Link className="footerContactIcon smediaL"><FaLinkedinIn/></Link>
+            <Link className="footerContactIcon smediaI"><AiOutlineInstagram/></Link>
+          </div>
         </div>
       </div>
       <div className="footerCopyright">

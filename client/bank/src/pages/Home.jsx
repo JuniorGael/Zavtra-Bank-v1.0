@@ -1,24 +1,22 @@
-import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import {HiArrowSmRight} from 'react-icons/hi'
-import { AuthContext } from '../AuthContext'
 import homeBanner from '../assets/bank2.png'
 import loan from '../assets/icon1.jpg'
 import bankWork from '../assets/bankWork.jpg'
 import author from '../assets/authorImg.jpeg'
 import '../styles/pages/Home.css'
+import { useSelector } from 'react-redux'
 
-document.title = 'Zavtra Bank - Together We Build Today and Tomorrow';
 
 
 const Home = () => {
+  document.title = 'Zavtra Bank - Together We Build Today and Tomorrow';
 
-  const {isLogin, checkIsLogin} = useContext(AuthContext)
-  
+  const isLogin = Boolean(useSelector(state => state.token))
   const navigate = useNavigate()
 
+
   const handleFillForm = () => {
-    checkIsLogin();
     if(isLogin) {
       navigate('/forms')
     } else {
@@ -134,14 +132,15 @@ const Home = () => {
             </div>
           </div>
         </section>
-        
-
         <section className="homePresentation">
           <div className="authorContainer">
-            <p className="authorQuote">
+            <div className="authorQuote">
+            <p >
               Our motto being “Together we build Today and Tomorrow”. 
               We adapt it into a culture of excellence, continuously learning, rewarding and winning integrity.
             </p>
+            <span className='arrowQuote'></span>
+            </div>
             <div className="homeAuthorDesc">
               <img src={author} aria-label="author image" className='authorImg'/>
               <h3 className="authorName">Franck Yossa</h3>

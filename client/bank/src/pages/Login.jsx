@@ -1,20 +1,23 @@
-import {useContext} from 'react'
+// import {useContext} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {FaFacebook, FaGooglePlus, FaGithub, FaInstagram, FaUserAlt, FaLock} from 'react-icons/fa'
-import { AuthContext } from '../AuthContext'
+// import { AuthContext } from '../AuthContext'
 import { Link } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
+import logo from '../assets/logo4.png'
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/pages/Login.css'
-
-document.title = "Login - Zavtra Bank";
+import { useDispatch } from 'react-redux'
+import { setLogin } from '../state'
 
 const Login = () => {
-  const { checkIsLogin } = useContext(AuthContext);
+  document.title = "Login - Zavtra Bank";
+
 
   const navigate = useNavigate();
+  const dispatch = useDispatch()
 
   const initialValues = {
     email: '',
@@ -39,8 +42,9 @@ const Login = () => {
       });
 
       const data = await response.json()
+
       if(data.userId) {
-        checkIsLogin()
+        dispatch(setLogin({user: data.userId, token: data.token}))
         navigate('/')
         toast.success(data.message)
       } else {
@@ -71,7 +75,7 @@ const Login = () => {
                 <legend className='rightSideFormText'>
                   <h1 className="rightSideTitle">Welcome Back!</h1>
                   <div className="rightSideBankLogo">
-                    <img src="https://zavtrabank.com/wp-content/uploads/2022/06/logo_min.png" aria-label="Bank logo" className='rightSideLogoImg'/>
+                    <img src={logo} aria-label="Bank logo" className='rightSideLogoImg'/>
                     <span className="rightSideLogoTitle">Zavtra Bank</span>
                   </div>
                 </legend>

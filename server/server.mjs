@@ -13,11 +13,14 @@ import cors from "cors";
 import usersRoutes from "./routes/users.mjs";
 
 import cookieParser from "cookie-parser";
+// importer le package pour utiliser les variables d'environnement
+dotenv.config({ path: "./.env" });
 
 // importer l'appli app
 const app = Express();
 
 app.use(Express.json());
+app.use(Express.urlencoded({ extended: true }));
 
 app.use(
   cors({
@@ -29,10 +32,7 @@ app.use(
 
 app.use(cookieParser());
 
-app.use(Express.urlencoded({ extended: true }));
 
-// importer le package pour utiliser les variables d'environnement
-dotenv.config({ path: "./.env" });
 
 // logger les requests et les responses
 app.use(morgan("dev"));

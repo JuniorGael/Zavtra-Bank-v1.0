@@ -3,6 +3,7 @@
   gap: 10px;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(15, auto);
+  padding-bottom: 60px;
 }
 
 .titleWrapper {

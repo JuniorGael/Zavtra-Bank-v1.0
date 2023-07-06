@@ -1,20 +1,20 @@
-import React, { useEffect, useState, useContext } from 'react'
+import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { AuthContext } from '../AuthContext'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../assets/logo4.png'
 import '../styles/components/Header.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { setLogout } from '../state';
 
 const Header = () => {
 
-  const navigate = useNavigate()
-
+  const isLogin = Boolean(useSelector((state) => state.token))
   const [isOpen, setIsOpen] = useState(false)
 
-  const { isLogin, checkIsLogin } = useContext(AuthContext);
-
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   const handleClick = () => {
     setIsOpen(!isOpen)
@@ -36,21 +36,13 @@ const Header = () => {
     .then(res => res.json())
     .then(data => {
       if(data) {
-        checkIsLogin();
-        if(!isLogin) {
-          navigate('/')
-        }
+        dispatch(setLogout())
+        navigate('/')
         toast.success("You logged out successfully!")
-      } else {
-        alert('error')
       }
     })
     .catch(err => console.error(err))
   }
-
-  useEffect(() => {
-    checkIsLogin();
-  }, [])
 
   return (
     <div className='header'>

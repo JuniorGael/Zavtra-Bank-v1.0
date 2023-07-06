@@ -2,6 +2,7 @@
   background-color: var(--backgroundForms-color);
   display: flex;
   flex: 1 1;
+  padding-bottom: 60px;
   position: relative;
 }
 
@@ -127,17 +128,11 @@
   grid-area: 13 / 1 / span 1 / span 6;
 }
 
-/* .formBtn {
-  grid-area: 15 / 2 / span 1 /span 4;
-  margin-inline: auto;
-  padding: 10px;
-} */
-
 .field {
   width: 100%;
   display: block;
   border: none;
-  border-bottom: 1px solid var(--secondary3-color);
+  border-bottom: 1px solid var(--secondary2-color);
   font-size: 16px;
   padding-left: 10px;
 }
@@ -275,7 +270,6 @@
 
 /* ======================= Footer ============== */
 
-
 .docFooter {
   width: 100%;
   display: flex;
@@ -290,38 +284,7 @@
 
 /* ============================================== */
 
-.btnContainer {
-  margin: 15px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.formBtn{
-  position: absolute;
-  top: 70px;
-}
-
-.btn {
-  padding: 15px;
-  font-size: 16px;
-  background: var(--secondary3-color);
-  color: var(--white-color);
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
-}
-
-.formBtn {
-  margin-right: 15px;
-}
-
 @media screen and (max-width: 768px) {
-
-  .documentWrapper {
-    margin: 120px 0;
-  }
-
   .documentWrapper {
     padding: 10px;
   }
@@ -344,7 +307,6 @@
   .titleItem {
     font-size: 24px;
   }
-
 
   .form .user {
     grid-area: 2 / 1 / span 1 / span 6;
@@ -373,31 +335,31 @@
   .form .debtor {
     grid-area: 6 / 1 / span 1 / span 6;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .form .borrower {
     grid-area: 7 / 1 / span 1 / span 6;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .form .born-borrower {
     grid-area: 8 / 1 / span 1 / span 6;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .form .passport-borrower {
     grid-area: 9 / 1 / span 1 / span 6;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .form .resident-borrower {
     grid-area: 10 / 1 / span 1 / span 6;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .form .terms {
@@ -408,11 +370,10 @@
   .form .amount-borrower {
     grid-area: 12 / 1 / span 1 / span 6;
     display: flex;
-      flex-direction: column;
+    flex-direction: column;
   }
   .form .note {
     grid-area: 13 / 1 / span 1 / span 6;
-    
   }
 
   .authors {
@@ -422,33 +383,7 @@
     gap: 50px;
   }
 
-    .authors span:nth-child(2) {
+  .authors span:nth-child(2) {
     margin-top: 0px;
-  }
-
-  .btnContainer {
-    margin: 5px;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .formBtn{
-    position: absolute;
-    top: 45px;
-  }
-
-  .btn {
-    padding: 15px;
-    font-size: 16px;
-    background: var(--secondary3-color);
-    color: var(--white-color);
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-  }
-
-  .formBtn {
-    margin-right: 15px;
   }
 }

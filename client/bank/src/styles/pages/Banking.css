@@ -23,7 +23,6 @@
 
 .bankingLoansTitle, .bankingDepositTitle {
   font-size: 30px;
-  text-decoration: underline;
 }
 
 .unorderedBankingLoan, .unorderedBankingDeposit {
@@ -45,7 +44,7 @@
 
 .link {
   text-decoration: underline;
-  color: var(--secondary3-color);
+  color: var(--secondary2-color);
 }
 
 @media screen and (max-width: 768px){

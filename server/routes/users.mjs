@@ -28,6 +28,4 @@ router.post("/register", validatePassword, signup);
 //http://localhost:5174/auth/logout
 router.post("/logout", logout);
 
-
-
 export default router;

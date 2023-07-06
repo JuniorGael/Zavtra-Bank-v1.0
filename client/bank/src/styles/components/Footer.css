@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--black-color);
-  color: var(--secondary3-color);
+  color: var(--secondary2-color);
 }
 
 /* ========================================================= */
@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid var(--secondary3-color);
+  border-bottom: 1px solid var(--secondary2-color);
   padding-bottom: 25px;
   margin-inline: 80px;
   padding-top: 45px;
@@ -39,16 +39,16 @@
   font-size: 25px;
 }
 
-.smediaF:hover {
+.smediaF {
   color: var(--facebook-color);
 }
-.smediaT:hover {
+.smediaT {
   color: var(--twitter-color);
 }
-.smediaI:hover {
+.smediaI {
   color: var(--instagram-color);
 }
-.smediaL:hover {
+.smediaL {
   color: var(--linkedin-color);
 }
 
@@ -73,11 +73,20 @@
   font-size: 20px;
 }
 
+.icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footerContactIcon {
+  font-size: 18px;
+}
 .footerContactText {
-  font-size: 14px;
+  /* font-size: 22px; */
+  font-weight: 400;
   color: var(--white-color);
-  margin-bottom: 8px;
-  font-weight: normal;
+  
 }
 
 /* ======================================================== */
@@ -90,7 +99,7 @@
 .footerSecurity {
   font-size: 16px;
   font-weight: 400;
-  color: var(--secondary3-color);
+  color: var(--secondary2-color);
   cursor: pointer;
 }
 

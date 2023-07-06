@@ -15,7 +15,7 @@ const Accordion = ({section, index}) => {
       key={index} 
       onClick={toggle}
       style={{
-        color: `${isOpen ? "var(--secondary3-color)" : ""}`
+        color: `${isOpen ? "var(--secondary2-color)" : ""}`
       }}
       >
         <div className="columnTitle">{section.title}</div>

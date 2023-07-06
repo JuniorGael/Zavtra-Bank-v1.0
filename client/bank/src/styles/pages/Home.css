@@ -1,40 +1,40 @@
 .home {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-  
-  .homeBanner {
-    display: flex;
-    flex-direction: column;
-    color: var(--white-color);
-    position: relative;
-  }
-  
-  .homeBannerImg {
-  max-height: 600px;        
-  }
+
+.homeBanner {
+  display: flex;
+  flex-direction: column;
+  color: var(--white-color);
+  position: relative;
+}
+
+.homeBannerImg {
+  max-height: 600px;
+}
 
 .bannerText {
-    position: absolute;
-    top: 20%;
-    left: 10%;
-  }
-  
-  .bannerTitle {
-    color: var(--secondary2-color);
-    /* color: #fec739; */
-    font-size: clamp(100px, 20vw, 90px);
-    /* font-size: 100px; */
-    line-height: 0.9;
-    margin-bottom: 70px;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+.bannerTitle {
+  color: var(--secondary2-color);
+  /* color: #fec739; */
+  font-size: clamp(100px, 20vw, 90px);
+  /* font-size: 100px; */
+  line-height: 0.9;
+  margin-bottom: 70px;
 }
 
 .bannerDesc {
-    font-size: 35px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    color: var(--black-color);
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: var(--black-color);
 }
 
 .bannerBtn {
@@ -51,82 +51,81 @@
 /* ========================================================= */
 
 .loans {
-    margin-top: 70px;
-    display: flex;
+  margin-top: 70px;
+  display: flex;
 }
 
 .loansItems {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .loansItemImg {
-    max-width: 100px;
-    max-height: 100px;
-    border-radius: 50px;
-    margin-bottom: 20px;
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 50px;
+  margin-bottom: 20px;
 }
 
 .loansItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
 }
 
 .loansTitle {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .loansDesc {
-    font-size: 16px;
-    font-weight: normal;
-    text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
 }
 
 /* ============================================================= */
 
 .bankProcedure {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
 }
 
 .bankProcedureBgTitle {
-    width: 100%;
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--graylight-color);
-    color: var(--secondary2-color);
-    margin-bottom: 30px;
-
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--graylight-color);
+  color: var(--secondary2-color);
+  margin-bottom: 30px;
 }
 
 .bankProcedureTitle {
-    font-size: 70px;
+  font-size: 70px;
 }
 
 .container {
-    max-width: 1280px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-inline: auto;
-    margin-top: 40px;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  margin-top: 40px;
 }
 
 .bankProcedureWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .bankProcedureImg {
@@ -135,106 +134,128 @@
 }
 
 .bankProcedureText {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
 }
 
 .bankprocedureItems {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .arrowContainer {
-    display: flex;
-    font-size: 18px;
+  display: flex;
+  font-size: 18px;
 }
 
-
 .bankprocedureDesc {
-    font-size: 18px;
-    font-weight: normal;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .linkTo {
-    color: var(--secondary3-color);
-    font-weight: 600;
-    cursor: pointer;
+  color: var(--secondary2-color);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* =============================================================== */
 
 .homePresentation {
-    width: 100%;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
 }
 
 .authorContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
 }
 
 .authorQuote {
-    max-width: 400px;
-    font-size: 16px;
-    font-weight: normal;
-    border: 2px solid var(--tertiary-color);
-    padding: 20px;
-    border-radius: 10px;
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: justify;
+  border: 1px solid var(--black-color);
+  background-color: white;
 }
 
-.authorQuote::before {
-  content: '"';
-  font-weight: 500;
-  font-size: 20px;
-  padding-right: 3px;
+.authorQuote p {
+  font-size: 16px;
 }
 
-.authorQuote::after {
-  content: '"';
-  font-weight: 500;
-  font-size: 20px;
-  padding-left: 3px;
+.arrowQuote::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+}
+
+.arrowQuote {
+  display: block;
+  position: absolute;
+  background-color: var(--black-color);
+  top: 50%;
+  right: -40px;
+  transform: translate(0, -50%) rotate(-90deg);
+  border-width: 20px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: white;
 }
 
 .homeAuthorDesc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
 }
 
 .authorImg {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .teamQuote {
-    display: flex;
-    justify-content: center;
-    margin: 70px;
+  display: flex;
+  justify-content: center;
+  margin: 70px;
 }
 
 .teamQuoteDesc {
-    font-size: 24px;
-    font-weight: 400;
-    border-top: 2px solid var(--black-color);
-    border-bottom: 2px solid var(--black-color);
-    text-align: center;
-    padding: 10px;
+  font-size: 24px;
+  font-weight: 400;
+  border-top: 2px solid var(--black-color);
+  border-bottom: 2px solid var(--black-color);
+  text-align: center;
+  padding: 10px;
 }
 
 /* =================Responsives=============================== */
 
 @media screen and (max-width: 550px) {
-  
   .bannerText {
     position: absolute;
     top: 30%;
@@ -257,13 +278,13 @@
     font-weight: normal;
   }
 
-/* ================================================== */
+  /* ================================================== */
 
   .loans {
     padding: 15px;
     flex-direction: column;
   }
-  
+
   .loansItems {
     margin-bottom: 15px;
   }
@@ -326,7 +347,8 @@
 
   .authorContainer {
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+    padding-inline: 10px;
   }
 
   .authorQuote {
@@ -346,7 +368,8 @@
     font-size: 16px;
   }
 
-  .authorFct, .authorMail {
+  .authorFct,
+  .authorMail {
     font-size: 14px;
   }
 
@@ -360,8 +383,15 @@
   }
 }
 
-@media screen and (min-width: 551px) and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .arrowQuote {
+    top: 100%;
+    right: 50%;
+    transform: translate(50%, 0) rotate(0);
+  }
+}
 
+@media screen and (min-width: 551px) and (max-width: 768px) {
   .bannerText {
     position: absolute;
     top: 30%;
@@ -384,13 +414,13 @@
     font-weight: normal;
   }
 
-/* ================================================== */
+  /* ================================================== */
 
   .loans {
     padding: 15px;
     flex-direction: column;
   }
-  
+
   .loansItems {
     margin-bottom: 15px;
   }
@@ -453,7 +483,7 @@
 
   .authorContainer {
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
 
   .authorQuote {
@@ -476,7 +506,8 @@
     font-size: 16px;
   }
 
-  .authorFct, .authorMail {
+  .authorFct,
+  .authorMail {
     font-size: 14px;
   }
 
@@ -488,13 +519,9 @@
   .teamQuoteDesc {
     font-size: clamp(14px, 6vw, 16px);
   }
-  
 }
 
-
-
 @media screen and (min-width: 769px) and (max-width: 992px) {
-
   .bannerText {
     margin-top: 80px;
     left: 5%;
@@ -514,7 +541,7 @@
     font-size: 18px;
   }
 
-/* ================================================== */
+  /* ================================================== */
 
   .loans {
     flex-wrap: wrap;
@@ -592,7 +619,8 @@
     font-size: 16px;
   }
 
-  .authorFct, .authorMail {
+  .authorFct,
+  .authorMail {
     font-size: 14px;
   }
 
@@ -604,7 +632,6 @@
 }
 
 @media screen and (min-width: 993px) and (max-width: 1400px) {
-
   .bannerText {
     top: 30%;
     left: 5%;
