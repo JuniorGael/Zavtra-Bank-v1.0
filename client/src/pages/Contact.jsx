@@ -31,7 +31,7 @@ const Contact = () => {
     const validateFormData = await contactSchema.validate(values, {abortEarly: false})
 
     try {
-      const responseEmail = await fetch('http://localhost:5174/sendEmail', {
+      const responseEmail = await fetch('/api/sendEmail', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -6,7 +6,7 @@ const initialState = {
 };
 
 const checkIsLogin = createAsyncThunk("auth/checkIsLogin", async () => {
-  const response = await fetch("http://localhost:5174/auth", {
+  const response = await fetch("/api/auth", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

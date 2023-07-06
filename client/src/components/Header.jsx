@@ -26,7 +26,7 @@ const Header = () => {
 
   const handleLogout = () => {
     closeMenu()
-    fetch('http://localhost:5174/logout', {
+    fetch('/api/logout', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

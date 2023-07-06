@@ -13,19 +13,19 @@ import auth from "../middlewares/auth.mjs";
 
 const router = new Router();
 
-//http://localhost:5174/auth
+///api/auth
 router.post("/auth", auth);
 
-//http://localhost:5174/login
+///api/login
 router.post("/login", login);
 
-//http://localhost:5174/sendEmail
+///api/sendEmail
 router.post("/sendEmail", sendEmail);
 
-//http://localhost:5174/register
+///api/register
 router.post("/register", validatePassword, signup);
 
-//http://localhost:5174/auth/logout
+///api/auth/logout
 router.post("/logout", logout);
 
 export default router;
