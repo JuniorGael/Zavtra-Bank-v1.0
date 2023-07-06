@@ -50,7 +50,7 @@ app.use("/api", usersRoutes);
 app.use(Express.static(path.join(__dirname, "../client/dist")));
 
 // Resolve react-router issue.
-app.get("/public/*", (_, res) => {
+app.get("/*", (_, res) => {
   res.sendFile(path.join(__dirname, "../client/dist/index.html"), (err) => {
     if (err) res.status(500).json(err);
   });
