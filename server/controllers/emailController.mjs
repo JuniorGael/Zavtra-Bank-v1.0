@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === "production") {
   transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.NODEJSMAILERUSER,
+      user: process.env.NODEJSMAILERUSER,  // celui qui recoit les messages
       pass: process.env.NODEJSMAILERPASSWORD,
     },
   });
@@ -28,7 +28,7 @@ export const sendEmail = (req, res) => {
   console.log(req.body);
 
   const mailOptions = {
-    from: process.env.NODEJSMAILERUSER,
+    from: process.env.NODEJSMAILERUSER, // celui qui envoit les messages
     to: email,
     subject: subject,
     text: message,
