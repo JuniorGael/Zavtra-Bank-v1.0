@@ -14,19 +14,19 @@ import FooterPdf from "./FooterPdf";
 Font.register({
   family: "Poppins",
   fontWeight: 400,
-  src: "fonts/Poppins-Regular.ttf",
+  src: "assets/fonts/Poppins-Regular.ttf",
 });
 
 Font.register({
   family: "Poppins",
   fontWeight: 500,
-  src: "fonts/Poppins-Medium.ttf",
+  src: "assets/fonts/Poppins-Medium.ttf",
 });
 
 Font.register({
   family: "Poppins",
   fontWeight: 700,
-  src: "fonts/Poppins-Bold.ttf",
+  src: "assets/fonts/Poppins-Bold.ttf",
 });
 
 const styles = StyleSheet.create({
