@@ -18,12 +18,14 @@ import ViewerAgreement from './pages/pdfViewer/VewerAgreement'
 import ViewerSlip from './pages/pdfViewer/ViewerSlip'
 import ViewerDepositACA from './pages/pdfViewer/ViewerDepositACA'
 import Banking from './pages/Banking'
+import Dashboard from './pages/Dashboard'
 
 const AppRoutes = () => {
 
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/banking' element={<Banking />} />
       <Route path="/about-us" element={<About />} />
       <Route path="/contact-us" element={<Contact />} />

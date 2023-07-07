@@ -25,10 +25,7 @@ const Contact = () => {
   })
 
   const handleSubmit = async (values, actions) => {
-    console.log(values);
     actions.resetForm()
-
-    const validateFormData = await contactSchema.validate(values, {abortEarly: false})
 
     try {
       const responseEmail = await fetch('/api/sendEmail', {
@@ -37,7 +34,7 @@ const Contact = () => {
           "Content-Type": "application/json",
         },
         credentials: 'include',
-        body: JSON.stringify(validateFormData),
+        body: JSON.stringify(values),
         })
         const response = await responseEmail.json()
         console.log(response.message);
