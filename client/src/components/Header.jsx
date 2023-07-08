@@ -11,6 +11,8 @@ import { setLogout } from '../state';
 const Header = () => {
 
   const isLogin = Boolean(useSelector((state) => state.token))
+  const isAdmin = useSelector((state) => state.isAdmin)
+  
   const [isOpen, setIsOpen] = useState(false)
 
   const dispatch = useDispatch()
@@ -100,6 +102,21 @@ const Header = () => {
           >
             Contact Us
           </NavLink>
+
+          {
+            (isLogin && isAdmin) && (
+              <NavLink 
+            to='/dashboard'
+            className='headerLink'
+            onClick={closeMenu}
+            style={({ isActive }) => {
+              return { color: isActive ? "#309478" : "" };
+            }}
+          >
+            Dashboard
+          </NavLink>
+            )
+          }
 
         </div>
         {
