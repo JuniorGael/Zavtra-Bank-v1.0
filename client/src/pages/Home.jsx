@@ -15,7 +15,6 @@ const Home = () => {
   const isLogin = Boolean(useSelector(state => state.token))
   const navigate = useNavigate()
 
-
   const handleFillForm = () => {
     if(isLogin) {
       navigate('/forms')
@@ -23,7 +22,6 @@ const Home = () => {
       navigate('/login')
     }
   }
-
 
   return (
     <div className='home'>

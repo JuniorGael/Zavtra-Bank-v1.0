@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../assets/logo4.png'
 import '../styles/components/Header.css'
@@ -114,7 +114,6 @@ const Header = () => {
           :
           <NavLink to='/login' className="headerItem" onClick={closeMenu}>Login</NavLink>
         }
-        <ToastContainer />
       </div>
     </div>
   )

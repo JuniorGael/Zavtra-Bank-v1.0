@@ -5,7 +5,13 @@ dotenv.config({ path: "./.env" });
 
 import { validatePassword } from "../middlewares/password.mjs";
 
-import { signup, login, logout } from "../controllers/users.mjs";
+import {
+  signup,
+  login,
+  logout,
+  getUsers,
+  deleteUser,
+} from "../controllers/users.mjs";
 
 import { sendEmail } from "../controllers/emailController.mjs";
 
@@ -13,19 +19,17 @@ import auth from "../middlewares/auth.mjs";
 
 const router = new Router();
 
-///api/auth
-router.post("/auth", auth);
-
-///api/login
-router.post("/login", login);
-
-///api/sendEmail
-router.post("/sendEmail", sendEmail);
-
-///api/register
 router.post("/register", validatePassword, signup);
-
-///api/auth/logout
+router.post("/login", login);
 router.post("/logout", logout);
+
+router.post("/auth", auth, (req, res) => {
+  res.status(200).json({ token: req.cookies.token });
+});
+
+router.get("/users", auth, getUsers);
+router.delete("/users/:id", deleteUser);
+
+router.post("/sendEmail", sendEmail);
 
 export default router;

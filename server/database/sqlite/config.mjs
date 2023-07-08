@@ -13,6 +13,7 @@ const db = new sqlite3.Database("db-bank.sqlite", (err) => {
     email VARCHAR(255) UNIQUE NOT NULL,
     password VARCHAR(255) NOT NULL,
     policy_terms BOOLEAN NOT NULL DEFAULT false,
+    admin BOOLEAN NOT NULL DEFAULT false,
     timestamp DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 		)`,
       (err) => {

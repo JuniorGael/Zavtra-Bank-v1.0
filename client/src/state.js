@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   user: null,
+  isAdmin: false,
   token: null,
 };
 
@@ -27,10 +28,12 @@ export const authSlice = createSlice({
   reducers: {
     setLogin: (state, action) => {
       state.user = action.payload.user;
+      state.isAdmin = action.payload.isAdmin;
       state.token = action.payload.token;
     },
     setLogout: (state) => {
       state.user = null;
+      state.isAdmin = false;
       state.token = null;
     },
   },
@@ -39,6 +42,7 @@ export const authSlice = createSlice({
       const isValid = action.payload;
       if (!isValid) {
         state.user = null;
+        state.isAdmin = false;
         state.token = null;
       }
     });

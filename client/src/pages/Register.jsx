@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 import {useNavigate} from 'react-router-dom'
 import {CgProfile} from 'react-icons/cg'
 import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import logo from '../assets/logo4.png'
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/pages/Register.css'
@@ -181,7 +181,6 @@ const Register = () => {
         <div className="registerRight">
           <span className="registerRightBankSlogan">BANK OF TODAY<br/> AND TOMORROW</span>
         </div>
-        <ToastContainer />
       </div>
     </div>
   )

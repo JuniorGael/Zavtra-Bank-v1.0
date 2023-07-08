@@ -18,7 +18,6 @@ const auth = async (req, res, next) => {
         res.status(401).json({ error: "Unauthorized" });
       } else {
         req.userId = decoded.userId;
-        res.status(200).json({ userId: decoded.userId });
       }
       next();
     });

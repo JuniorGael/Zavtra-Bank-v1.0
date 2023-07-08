@@ -5,7 +5,7 @@ import * as Yup from 'yup'
 import {FaFacebook, FaGooglePlus, FaGithub, FaInstagram, FaUserAlt, FaLock} from 'react-icons/fa'
 // import { AuthContext } from '../AuthContext'
 import { Link } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import logo from '../assets/logo4.png'
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/pages/Login.css'
@@ -43,8 +43,8 @@ const Login = () => {
 
       const data = await response.json()
 
-      if(data.userId) {
-        dispatch(setLogin({user: data.userId, token: data.token}))
+      if(data.user.id) {
+        dispatch(setLogin({user: data.user.id, isAdmin: Boolean(data.user.admin), token: data.token}))
         navigate('/')
         toast.success(data.message)
       } else {
@@ -138,7 +138,6 @@ const Login = () => {
             )}
             
           </Formik>
-          <ToastContainer />
         </div>
       </div>
     </div>
