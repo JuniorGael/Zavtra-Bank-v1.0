@@ -15,6 +15,14 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  const initialValues = {
+    username: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    policyTerms: false
+  }
+
   const RegisterSchema = Yup.object().shape({
     username: Yup.string()
     .min(3, 'Too Short!')
@@ -60,13 +68,7 @@ const Register = () => {
       <div className="registerWrapper">
         <div className="registerLeft">
           <Formik 
-              initialValues={{
-                username: '',
-                email: '',
-                password: '',
-                confirmPassword: '',
-                policyTerms: false
-              }}
+              initialValues={initialValues}
               validationSchema={RegisterSchema}
               onSubmit={onSubmit}
           >
@@ -81,7 +83,7 @@ const Register = () => {
                     Create Account
                   </h1>
                   <div className="registerLeftBankLogo">
-                    <img src={logo} aria-label="Bank logo" className='registerLeftLogo'/>label 
+                    <img src={logo} aria-label="Bank logo" className='registerLeftLogo'/> 
                     <span className="registerLeftLogoTitle">Zavtra Bank</span>
                   </div>
                 </legend>

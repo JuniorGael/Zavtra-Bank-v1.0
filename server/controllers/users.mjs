@@ -122,7 +122,8 @@ export const getUsers = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
   try {
-    await dbQuery("DELETE * FROM users WHERE id = ?", [req.params.id]);
+    await dbQuery("DELETE FROM users WHERE id = ?", [req.params.id]);
+    console.log(req.params.id);
     res.status(200).json({ message: "User deleted successfully" });
   } catch (error) {
     return res.status(500).json({ error });

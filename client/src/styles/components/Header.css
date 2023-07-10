@@ -125,11 +125,11 @@
   }
 
   .menuLinks {
-    gap: 20px;
+    gap: 15px;
   }
 
-  .headerLink {
-    font-size: 17px;
+  .headerLink, .headerItem-logout {
+    font-size: 15px;
   }
 }
 
@@ -143,6 +143,6 @@
   }
 
   .menuLinks {
-    gap: 50px;
+    gap: 30px;
   }
 }
