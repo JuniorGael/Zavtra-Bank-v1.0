@@ -10,6 +10,7 @@ const Dashboard = () => {
 
   // State variables
   const [users, setUsers] = useState([])
+  const [totalUsers, setTotalUsers] = useState(0)
 
   // Other hooks
   const navigate = useNavigate()
@@ -19,8 +20,7 @@ const Dashboard = () => {
   const isAdmin = useSelector((state) => state.isAdmin)
 
   // Total of users whose logged in
-  const totalUsers = users.length - 1;
-  console.log("Total number of users:", totalUsers);
+  
 
   // Check if the user is logged in
   useEffect(() => {
@@ -46,7 +46,9 @@ const Dashboard = () => {
       })
       const data = await response.json()
       setUsers(data)
-      console.log(data)
+
+      const count = data.filter(user => !user.admin ).length;
+      setTotalUsers(count)
     } catch (error) {
       console.error(error)
     }
@@ -54,7 +56,10 @@ const Dashboard = () => {
 
   useEffect(() => {
     getUsers()
+
   }, [])
+
+  
 
   // Handle delete button click
   const handleDelete = async (id) => {
@@ -67,10 +72,13 @@ const Dashboard = () => {
           },
           credentials: 'include',
       })
-      const data = response.json() 
-      const deleteUserData = users.filter(user => user.id !== id)
-      console.log(deleteUserData);
-      setUsers(deleteUserData)
+
+      if(response.ok) {
+        getUsers()
+        const data = await response.json()
+        toast.success(data.message)
+      }
+      
     } catch (error) {
       console.log(error);
     }
@@ -86,25 +94,26 @@ const Dashboard = () => {
         <p className="totalUserNber">{totalUsers}</p>
       </div>
 
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Email</th>
-            <th>Date</th>
-            <th></th>
+      <table className='dashboardTableContainer'>
+        <thead className='dashboardTable'>
+          <tr className='dashboardItems'>
+            <th className='dashboardItemHead'>ID</th>
+            <th className='dashboardItemHead'>Username</th>
+            <th className='dashboardItemHead'>Email</th>
+            <th className='dashboardItemHead'>Date</th>
+            <th className='dashboardItemHead'><RiDeleteBin6Line color='black' /></th>
           </tr>
         </thead>
-        <tbody>
+
+        <tbody className='dashboardTable'>
           {users &&
             users.map((user, index) => (
-              <tr key={index}>
-                <td>{user.id}</td>
-                <td>{user.username}</td>
-                <td>{user.email}</td>
-                <td>{user.timestamp}</td>
-                <td>{!user.admin && <RiDeleteBin6Line onClick={() => handleDelete(user.id)}/>}</td>
+              <tr key={index} className='dashboardItems'>
+                <td className='dashboardItem'>{user.id}</td>
+                <td className='dashboardItem'>{user.username}</td>
+                <td className='dashboardItem'>{user.email}</td>
+                <td className='dashboardItem'>{user.timestamp}</td>
+                <td className='dashboardItem'>{!user.admin && <RiDeleteBin6Line onClick={() => handleDelete(user.id)}/>}</td>
               </tr>
           ))}
         </tbody>
