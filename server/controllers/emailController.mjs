@@ -33,6 +33,9 @@ export const sendEmail = (req, res) => {
     to: process.env.NODEJSMAILERUSER,
     subject: subject,
     text: message,
+    Headers: {
+      "X-Original-From": email,
+    }
   };
 
   transporter.sendMail(mailOptions, (error) => {
