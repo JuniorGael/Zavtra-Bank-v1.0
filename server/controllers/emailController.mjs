@@ -28,8 +28,8 @@ export const sendEmail = (req, res) => {
   console.log(req.body);
 
   const mailOptions = {
-    from: process.env.NODEJSMAILERUSER, // celui qui envoit les messages
-    to: email,
+    from: email, // celui qui envoit les messages
+    to: process.env.NODEJSMAILERUSER,
     subject: subject,
     text: message,
   };
