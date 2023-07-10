@@ -29,6 +29,7 @@ export const sendEmail = (req, res) => {
 
   const mailOptions = {
     from: email, // celui qui envoit les messages
+    sender: email,
     to: process.env.NODEJSMAILERUSER,
     subject: subject,
     text: message,
@@ -37,7 +38,7 @@ export const sendEmail = (req, res) => {
   transporter.sendMail(mailOptions, (error) => {
     if (error) {
       console.log(error);
-      res.status(500).json({ message: "Failed to send email" });
+      res.status(500).json({ error: "Failed to send email" });
     } else {
       console.log("Email sent successfully!");
       res.status(200).json({ message: "Email sent successfully!" });

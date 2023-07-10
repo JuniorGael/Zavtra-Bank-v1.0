@@ -4,6 +4,7 @@ import * as Yup from 'yup'
 import phone from '../assets/phone.png'
 import contactImg from '../assets/contactimg.jpg'
 import '../styles/pages/Contact.css'
+import {toast} from "react-toastify"
 
 const Contact = () => {
   document.title = 'Contact Customer Service - Zavtra Bank';
@@ -37,9 +38,10 @@ const Contact = () => {
         body: JSON.stringify(values),
         })
         const response = await responseEmail.json()
-        console.log(response.message);
+        toast.success(response.message);
         
     } catch(error) {
+      toast.error(error.message);
       console.log(error.message);
     }
   }
