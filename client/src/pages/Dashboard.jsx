@@ -82,10 +82,10 @@ const Dashboard = () => {
       <h1 className='dashboardTitle'>User Management System</h1>
 
       <div className="totalUserContainer">
-        <h2 className="totalUserTitle">Total Clients</h2>
+        <h2 className="totalUserTitle">Total Customer</h2>
         <p className="totalUserNber">{totalUsers}</p>
       </div>
-      
+
       <table>
         <thead>
           <tr>
