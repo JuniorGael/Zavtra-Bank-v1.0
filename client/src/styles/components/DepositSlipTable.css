@@ -1,10 +1,11 @@
-table {
+.tableForm {
   width: 100%;
   margin-inline: auto;
   border-collapse: collapse;
+  border: 1px solid var(--black-color);
 }
 
-table th, table td {
+.slipItem {
   border: 1px solid var(--black-color);
   padding: 5px 10px;
   font-size: 18px;
@@ -12,7 +13,7 @@ table th, table td {
   text-align: center;
 }
 
-table tr {
+.slipItems {
   display: flex;
   align-items: stretch;
 }
