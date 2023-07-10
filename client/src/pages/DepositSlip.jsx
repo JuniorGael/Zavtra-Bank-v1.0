@@ -5,12 +5,17 @@ import logo from "../assets/logo4.png";
 import "../styles/pages/DepositSlip.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";
+import useWindowResize from "../hooks/useWindowResize";
+import { downloadPdf } from "../utils/func";
+import PdfDepositSlip from "../components/PdfDepositSlip";
 
 const DepositSlip = () => {
   const isLogin = Boolean(useSelector((state) => state.token));
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
+
+  const isMobile = useWindowResize()
 
   useEffect(() => {
     dispatch(checkIsLogin());
@@ -79,7 +84,13 @@ const DepositSlip = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    navigate("/pdf-preview-slip", { state: { values, months } });
+    if(isMobile) {
+      downloadPdf(<PdfDepositSlip data={{values, months}} />, "slip")
+    } else {
+      navigate("/pdf-preview-slip", { state: { values, months } });
+    }
+
+    
   };
 
   return (
@@ -191,7 +202,7 @@ const DepositSlip = () => {
           </div>
 
             <button type="submit" className="btn formBtn">
-              Consulter en PDF
+              {isMobile ? "Telecharger le PDF" : "Consulter en PDF"}
             </button>
         </form>
 

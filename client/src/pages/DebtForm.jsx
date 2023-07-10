@@ -5,10 +5,14 @@ import logo from "../assets/logo4.png";
 import "../styles/pages/DebtForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";
+import { downloadPdf } from "../utils/func";
 import PdfDebt from "../components/PdfDebt";
+import useWindowResize from "../hooks/useWindowResize";
 
 const DebtForm = () => {
   const navigate = useNavigate();
+
+  const isMobile = useWindowResize()
 
   const isLogin = Boolean(useSelector((state) => state.token));
   const dispatch = useDispatch();
@@ -26,7 +30,13 @@ const DebtForm = () => {
   const onSubmit = async (values, actions) => {
     actions.resetForm();
 
-    navigate("/pdf-preview-debt", { state: values });
+    if(isMobile) {
+      downloadPdf(<PdfDebt data={values} />, "debt")
+    } else {
+      navigate("/pdf-preview-debt", { state: values });
+    }
+
+
   };
 
   return (
@@ -361,7 +371,7 @@ const DebtForm = () => {
               </div>
 
               <button type="submit" className="btn formBtn">
-                Consulter en PDF
+                {isMobile ? "Telecharger le PDF" : "Consulter en PDF"}
               </button>
             </Form>
           )}

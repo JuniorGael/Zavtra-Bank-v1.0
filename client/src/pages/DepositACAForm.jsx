@@ -5,11 +5,16 @@ import "../styles/pages/DepositACAForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";
 import { useEffect } from "react";
+import useWindowResize from "../hooks/useWindowResize";
+import { downloadPdf } from "../utils/func";
+import PdfDepositACA from '../components/PdfDepositACA'
 
 const DepositACAForm = () => {
   const isLogin = Boolean(useSelector((state) => state.token));
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const isMobile = useWindowResize()
 
   useEffect(() => {
     dispatch(checkIsLogin());
@@ -23,7 +28,11 @@ const DepositACAForm = () => {
 
   const onsubmit = async (values, actions) => {
     actions.resetForm();
-    navigate("/pdf-preview-aca", { state: values });
+    if(isMobile) {
+      downloadPdf(<PdfDepositACA data={values} />, "deposit_aca")
+    } else {
+      navigate("/pdf-preview-aca", { state: values });
+    }
   };
   return (
     // TEMPLATE 0
@@ -144,7 +153,7 @@ const DepositACAForm = () => {
                 <span className="signatureName">Zavtra Bank</span>
               </div>
               <button type="submit" className="btn formBtn">
-                Consulter en PDF
+                {isMobile ? "Telecharger le PDF" : "Consulter en PDF"}
               </button>
             </Form>
           )}

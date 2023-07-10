@@ -6,22 +6,22 @@ import '../styles/components/DepositSlipTable.css'
 const DepositSlipTable = ({months, values, handleChange}) => {
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Months</th>
-          <th>Amount</th>
+    <table className='tableForm'>
+      <thead className='tableHeader'>
+        <tr className='slipItems'>
+          <th className='slipItem'>Months</th>
+          <th className='slipItem'>Amount</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody className='tableBody'>
         {months && (
           Object.keys(months).map((month, index) => {
             return(
-              <tr key={index}>
-                <td>
+              <tr key={index} className='slipItems'>
+                <td className='slipItem'>
                   <label aria-label='twelve months'>{month}</label>
                 </td>
-                <td>
+                <td className='slipItem'>
                   <input 
                     type='number'
                     id={month}
@@ -35,9 +35,9 @@ const DepositSlipTable = ({months, values, handleChange}) => {
               </tr>
             )
           }))}
-        <tr>
-          <td>Total</td>
-          <td>
+        <tr className='slipItems'>
+          <td className='slipItem'>Total</td>
+          <td className='slipItem'>
             <input style={{border: 'none'}}
               type='number'
               name='total'

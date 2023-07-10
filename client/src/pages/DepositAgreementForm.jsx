@@ -5,10 +5,15 @@ import logo from "../assets/logo4.png";
 import "../styles/pages/DepositAgreementForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";
+import useWindowResize from "../hooks/useWindowResize";
+import PdfDepositAgreement from '../components/PdfDepositAgreement'
+import { downloadPdf } from "../utils/func";
 
 const DepositAgreementForm = () => {
   const isLogin = Boolean(useSelector((state) => state.token));
   const navigate = useNavigate();
+
+  const isMobile = useWindowResize()
 
   const dispatch = useDispatch();
 
@@ -19,7 +24,13 @@ const DepositAgreementForm = () => {
   const onsubmit = async (values, actions) => {
     actions.resetForm();
 
-    navigate("/pdf-preview-agreement", { state: values });
+    if(isMobile) {
+      downloadPdf(<PdfDepositAgreement data={values} />, "deposit_agreement")
+    } else {
+      navigate("/pdf-preview-agreement", { state: values });
+    }
+
+    
   };
 
   useEffect(() => {
@@ -239,7 +250,7 @@ const DepositAgreementForm = () => {
             </div>
 
               <button type="submit" className="btn formBtn">
-                Consulter en PDF
+                {isMobile ? "Telecharger le PDF" : "Consulter en PDF"}
               </button>
           </Form>
         </Formik>
