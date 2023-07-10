@@ -3,7 +3,6 @@ import {useNavigate} from 'react-router-dom'
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {FaFacebook, FaGooglePlus, FaGithub, FaInstagram, FaUserAlt, FaLock} from 'react-icons/fa'
-// import { AuthContext } from '../AuthContext'
 import { Link } from 'react-router-dom'
 import {  toast } from 'react-toastify';
 import logo from '../assets/logo4.png'
