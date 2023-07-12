@@ -3,6 +3,7 @@ import Header from './components/Header'
 import AppRoutes from './AppRoutes'
 import Footer from './components/Footer'
 import { ToastContainer } from 'react-toastify'
+import BackToTop from './components/BackToTop'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
         <AppRoutes />
       </main>
       <Footer />
+      <BackToTop />
     </>
   )
 }
