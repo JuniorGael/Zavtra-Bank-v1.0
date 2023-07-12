@@ -202,7 +202,12 @@
 
     .rightSideForgotPasswordLink,
     .rightSideText,
-    .rightSideSignUp {
+    .rightSideSignUp,
+    .rightSideFieldControl {
+        font-size: 12px;
+    }
+
+    .rightSideBtn {
         font-size: 14px;
     }
 
