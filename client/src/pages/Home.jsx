@@ -84,7 +84,7 @@ const Home = () => {
       <section className="bankProcedure">
         <div className="bankProcedureBgTitle">
           <h2 className="bankProcedureTitle">
-            How it's works at Zavtra Bank?
+            How it works at Zavtra Bank?
           </h2>
         </div>
       </section>
@@ -151,7 +151,7 @@ const Home = () => {
 
           <div className="teamQuote">
             <p className="teamQuoteDesc">
-              Our team is driven by your success. Every single day, we'll support your business and help you to succeed
+              Our team is driven by your success. Every single day we'll support your business and help you to succeed
             </p>
           </div>
         </section>

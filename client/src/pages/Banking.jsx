@@ -13,7 +13,7 @@ const Banking = () => {
         <section className="bankingLoans">
           <h2 className="bankingLoansTitle">Loans</h2>
           <ul className="unorderedBankingLoan">
-            <li>Financial support depending on what you need</li>
+            <li>Financial support depending on what you need.</li>
           </ul>
           <p className="bankingLoanDescription">
             We are always happy to assist our clients financially depending on
