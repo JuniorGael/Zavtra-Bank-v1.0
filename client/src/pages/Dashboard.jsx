@@ -19,9 +19,6 @@ const Dashboard = () => {
   const isLogin = Boolean(useSelector((state) => state.token))
   const isAdmin = useSelector((state) => state.isAdmin)
 
-  // Total of users whose logged in
-  
-
   // Check if the user is logged in
   useEffect(() => {
     dispatch(checkIsLogin())
@@ -47,9 +44,11 @@ const Dashboard = () => {
       const data = await response.json()
       setUsers(data)
 
+      // Total of users whose logged in
       const count = data.filter(user => !user.admin ).length;
       setTotalUsers(count)
     } catch (error) {
+      toast.error(data.error)
       console.error(error)
     }
   }

@@ -92,7 +92,7 @@ const Contact = () => {
               <Form 
                 className='formContact'
               >
-                <legend className='formTitle'>Send Us a message</legend>
+                <legend className='formTitle'>Send us a message</legend>
                 <Field 
                   type='text'
                   name='subject' 
