@@ -13,6 +13,7 @@ const Contact = () => {
   const contactValues = {
     username: '',
     email: '',
+    subject: '',
     message: '',
   }
 
@@ -20,6 +21,8 @@ const Contact = () => {
     username: Yup.string()
     .min(3, 'Too Short!')
     .max(30, 'Too long')
+    .required('username is required'),
+    subject: Yup.string()
     .required('subject is required'),
     email: Yup.string().email('Invalid email').required('email required'),
     message: Yup.string().required('message is required')
@@ -114,6 +117,17 @@ const Contact = () => {
                   component='label'
                   className='form_label text-danger'
                   name='email' />
+
+                <Field 
+                  type='text'
+                  name='subject' 
+                  placeholder='Subject'
+                  className='fieldControl widthR'
+                />
+                <ErrorMessage 
+                  component='label'
+                  className='form_label text-danger'
+                  name='subject' />
 
                 <Field 
                   as='textarea'

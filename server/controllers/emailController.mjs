@@ -10,6 +10,7 @@ if (process.env.NODE_ENV === "production") {
   transporter = nodemailer.createTransport({
     service: "gmail",
     port: 465,
+    secure: true,
     auth: {
       user: process.env.NODEJSMAILERUSER,  // celui qui recoit les messages
       pass: process.env.NODEJSMAILERPASSWORD,
@@ -25,13 +26,13 @@ if (process.env.NODE_ENV === "production") {
 }
 
 export const sendEmail = (req, res) => {
-  const { email, message } = req.body;
+  const { username, email, subject, message } = req.body;
   console.log(req.body);
 
   const mailOptions = {
-    from: email, // celui qui envoit les messages
+    from: `${username}<${email}>`, // celui qui envoit les messages
     to: process.env.NODEJSMAILERUSER,
-    subject: `message from: ${email}`,
+    subject: subject,
     text: message,
   };
 
