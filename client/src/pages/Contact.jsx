@@ -11,13 +11,13 @@ const Contact = () => {
 
 
   const contactValues = {
-    subject: '',
+    username: '',
     email: '',
     message: '',
   }
 
   const contactSchema = Yup.object().shape({
-    subject: Yup.string()
+    username: Yup.string()
     .min(3, 'Too Short!')
     .max(30, 'Too long')
     .required('subject is required'),
@@ -95,8 +95,8 @@ const Contact = () => {
                 <legend className='formTitle'>Send us a message</legend>
                 <Field 
                   type='text'
-                  name='subject' 
-                  placeholder='Your subject'
+                  name='username' 
+                  placeholder='username'
                   className='fieldControl widthL'
                 />
                 <ErrorMessage 
