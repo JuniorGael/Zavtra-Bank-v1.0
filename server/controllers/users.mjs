@@ -114,6 +114,11 @@ export const getUsers = async (req, res) => {
       });
     }
     const users = await dbQuery("SELECT * FROM users");
+
+    users.forEach((user) => {
+      delete user.password;
+    });
+
     res.status(200).json(users);
   } catch (error) {
     return res.status(500).json({ error });
