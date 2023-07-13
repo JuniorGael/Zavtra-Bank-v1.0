@@ -3,6 +3,7 @@
   width: 100%;
   margin: 40px auto;
   text-align: center;
+  padding-inline: 15px;
 }
 
 .dashboardTitle {
@@ -39,7 +40,8 @@
   display: table-header-group;
 }
 
-.dashboardItemHead, .dashboardItem {
+.dashboardItemHead,
+.dashboardItem {
   padding: 5px 10px;
   width: 40px;
   font-size: 18px;
@@ -48,25 +50,36 @@
   border: 1px solid var(--black-color);
 }
 
-
-
-
 .dashboardItem:nth-child(5) {
   color: red;
   font-size: 22px;
+}
+
+.deleteBtn {
   cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
   .dashboardTitle {
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 
-  .dashboardItemHead:nth-child(4), .dashboardItem:nth-child(4) {
+  .totalUserTitle,
+  .totalUserNber {
+    font-size: 18px;
+  }
+  .deleteBtn {
+    font-size: 18px;
+  }
+
+  .dashboardItemHead:nth-child(4),
+  .dashboardItem:nth-child(4) {
     display: none;
   }
 
-  .dashboardItemHead, .dashboardItem  {
+  .dashboardItemHead,
+  .dashboardItem {
     padding: 3px;
     font-size: 14px;
     flex: none;
