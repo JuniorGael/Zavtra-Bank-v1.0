@@ -1,0 +1,92 @@
+.modalContainer {
+  padding-inline: 15px;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000dd;
+}
+
+.modal {
+  transform: translateY(-100px);
+  margin-inline: auto;
+  width: fit-content;
+  background-color: white;
+  /* border: 1px solid var(--secondary2-color); */
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.1);
+  transition: transform 350ms ease-in;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalHeader {
+  padding: 20px 60px;
+  background: var(--black-color);
+  color: var(--secondary2-color);
+}
+
+.modalBody {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 40px;
+  width: 100%;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.modalBody span {
+  font-weight: 500;
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background: var(--black-color);
+  width: 100%;
+  padding: 10px;
+}
+
+.modalFooter .modalBtn {
+  outline: none;
+  border: none;
+  width: 80px;
+  padding-block: 10px 8px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+}
+.modalBtn.confirm {
+  background: var(--secondary2-color);
+}
+
+.modalBtn.cancel {
+  background: rgb(173, 0, 0);
+}
+.modal.active {
+  transform: translateY(120px);
+}
+
+@media screen and (max-width: 768px) {
+  .modalHeader {
+    font-size: 16px;
+    padding: 15px 30px;
+  }
+
+  .modalBody {
+    font-size: 14px;
+    gap: 5px;
+  }
+
+  .modalFooter .modalBtn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
