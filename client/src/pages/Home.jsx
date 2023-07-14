@@ -36,9 +36,7 @@ const Home = () => {
 
       <section className="loans">
         <div className="loansItems">
-          <div className="loansItemImg">
-            <img src={loan} aria-label="loan image" className='loanImg'/>
-          </div>
+          <img src={loan} aria-label="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">MONTHLY LOAN</h2>
             <p className="loansDesc">
@@ -47,9 +45,7 @@ const Home = () => {
           </div>
         </div>
         <div className="loansItems">
-          <div className="loansItemImg">
-            <img src={loan} aria-label="loan image" className='loanImg'/>
-          </div>
+          <img src={loan} aria-label="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">QUARTERLY LOAN</h2>
             <p className="loansDesc">
@@ -58,9 +54,7 @@ const Home = () => {
           </div>
         </div>
         <div className="loansItems">
-          <div className="loansItemImg">
-            <img src={loan} aria-label="loan image" className='loanImg'/>
-          </div>
+          <img src={loan} aria-label="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">SEMI-ANNUAL LOAN</h2>
             <p className="loansDesc">
@@ -69,9 +63,7 @@ const Home = () => {
           </div>
         </div>
         <div className="loansItems">
-          <div className="loansItemImg">
-            <img src={loan} aria-label="loan image" className='loanImg'/>
-          </div>
+          <img src={loan} aria-label="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">ANNUAL LOAN</h2>
             <p className="loansDesc">
@@ -91,9 +83,7 @@ const Home = () => {
 
       <section className="container">
         <section className="bankProcedureWrapper">
-          <div className="bankProcedureImg">
-            <img src={bankWork} alt="bank procedure title" className='bankImg'/>
-          </div>
+          <img src={bankWork} alt="bank procedure title" className='bankImg'/>
           <div className="bankProcedureText">
             <div className="bankprocedureItems">
               <div className="arrowContainer">
