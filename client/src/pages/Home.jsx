@@ -1,9 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom'
 import {HiArrowSmRight} from 'react-icons/hi'
-import homeBanner from '../assets/bank2.png'
-import loan from '../assets/icon1.jpg'
-import bankWork from '../assets/bankWork.jpg'
-import author from '../assets/authorImg.jpeg'
+import homeBanner from '../assets/bank2.webp'
+import loan from '../assets/icon1.webp'
+import bankWork from '../assets/bankWork.webp'
+import author from '../assets/authorImg.webp'
 import '../styles/pages/Home.css'
 import { useSelector } from 'react-redux'
 

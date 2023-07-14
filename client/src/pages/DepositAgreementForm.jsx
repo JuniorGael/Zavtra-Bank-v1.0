@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo4.png";
+import logo from "../assets/logo4.webp";
 import "../styles/pages/DepositAgreementForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";

@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 import {FaFacebook, FaGooglePlus, FaGithub, FaInstagram, FaUserAlt, FaLock} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import {  toast } from 'react-toastify';
-import logo from '../assets/logo4.png'
+import logo from '../assets/logo4.webp'
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/pages/Login.css'
 import { useDispatch } from 'react-redux'

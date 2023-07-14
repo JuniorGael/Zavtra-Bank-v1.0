@@ -1,6 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/logo4.png";
+import logo from "../assets/logo4.webp";
 import "../styles/pages/DepositACAForm.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";

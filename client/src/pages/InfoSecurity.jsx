@@ -1,5 +1,5 @@
 import React from 'react'
-import banner from '../assets/banner2.jpg'
+import banner from '../assets/banner2.webp'
 import '../styles/pages/InfoSecurity.css'
 import Accordion from '../components/Accordion'
 import {data} from '../components/Data'

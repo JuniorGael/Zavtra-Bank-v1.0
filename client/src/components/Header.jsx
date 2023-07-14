@@ -3,7 +3,7 @@ import { Link, NavLink, useNavigate } from 'react-router-dom'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import logo from '../assets/logo4.png'
+import logo from '../assets/logo4.webp'
 import '../styles/components/Header.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { setLogout } from '../state';

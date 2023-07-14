@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import aboutImg from '../assets/aboutBanner.jpg'
-import ethic from '../assets/ethic.jpg'
-import focus from '../assets/focus.jpg'
-import drive2 from '../assets/drive2.jpg'
+import aboutImg from '../assets/aboutBanner.webp'
+import ethic from '../assets/ethic.webp'
+import focus from '../assets/focus.webp'
+import drive2 from '../assets/drive2.webp'
 import '../styles/pages/About.css'
 
 const About = () => {

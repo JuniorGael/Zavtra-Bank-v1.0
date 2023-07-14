@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom'
 import {CgProfile} from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 import {  toast } from 'react-toastify';
-import logo from '../assets/logo4.png'
+import logo from '../assets/logo4.webp'
 import 'react-toastify/dist/ReactToastify.css';
 import '../styles/pages/Register.css'
 

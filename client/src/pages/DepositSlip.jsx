@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import DepositSlipTable from "../components/DepositSlipTable";
-import logo from "../assets/logo4.png";
+import logo from "../assets/logo4.webp";
 import "../styles/pages/DepositSlip.css";
 import { useDispatch, useSelector } from "react-redux";
 import { checkIsLogin } from "../state";

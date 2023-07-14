@@ -1,8 +1,8 @@
 import React from 'react'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup'
-import phone from '../assets/phone.png'
-import contactImg from '../assets/contactimg.jpg'
+import phone from '../assets/phone.webp'
+import contactImg from '../assets/contactimg.webp'
 import '../styles/pages/Contact.css'
 import {toast} from "react-toastify"
 
