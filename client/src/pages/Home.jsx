@@ -103,7 +103,7 @@ const Home = () => {
           <div className="bankProcedureText">
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               
               <span className="bankprocedureDesc">
@@ -112,7 +112,7 @@ const Home = () => {
             </div>
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               <span className="bankprocedureDesc">
                 Download the loan form and fill it
@@ -120,7 +120,7 @@ const Home = () => {
             </div>
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               <span className="bankprocedureDesc">
               <Link to='/login' className='linkTo'>Log in</Link> to     your account and submit a form
@@ -128,7 +128,7 @@ const Home = () => {
             </div>
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               <span className="bankprocedureDesc">
                 Our administrators respond to you ASAP
