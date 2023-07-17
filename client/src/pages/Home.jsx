@@ -1,6 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom'
 import {HiArrowSmRight} from 'react-icons/hi'
-import homeBanner from '../assets/bank2.webp'
+import homeBanner from '../assets/bank2_1440.webp'
+import homeBannerSmall from '../assets/bank2_450.webp'
+import homeBannerMobile from '../assets/bank2_750.webp'
+import homeBannerTablet from '../assets/bank2_1000.webp'
 import loan from '../assets/icon1.webp'
 import bankWork from '../assets/bankWork.webp'
 import author from '../assets/authorImg.webp'
@@ -26,7 +29,21 @@ const Home = () => {
   return (
     <div className='home'>
       <section className="homeBanner">
-        <img src={homeBanner} aria-label="home banner" className='homeBannerImg'/>
+
+        <picture>
+          <source media='(max-width: 450px)' srcSet={homeBannerSmall}/>
+          <source media='(max-width: 768px)' srcSet={homeBannerMobile}/>
+          <source media='(max-width: 999px)' srcSet={homeBannerTablet}/>
+          <source media='(min-width: 1000px)' srcSet={homeBanner}/>
+          <img 
+            src={homeBanner} 
+            alt="home banner" 
+            className='homeBannerImg' 
+            width={1900} 
+            height={1018}
+          />
+        </picture>
+
         <div className="bannerText">
           <h1 className="bannerTitle">How much do<br/> you need?</h1>
           <p className="bannerDesc">Making it Easy for You</p>
@@ -83,7 +100,7 @@ const Home = () => {
 
       <section className="container">
         <section className="bankProcedureWrapper">
-          <img src={bankWork} alt="bank procedure title" className='bankImg'/>
+          <img src={bankWork} alt="bank procedure title" width={750} height={501} className='bankImg'/>
           <div className="bankProcedureText">
             <div className="bankprocedureItems">
               <div className="arrowContainer">

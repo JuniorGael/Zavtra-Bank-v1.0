@@ -49,7 +49,7 @@ const Header = () => {
   return (
     <div className='header'>
       <Link to='/' className='headerLogoWrapper'>
-        <img src={logo} aria-label="Zabtra bank logo" className='headerLogo'/>
+        <img src={logo} aria-label="Zabtra bank logo" width={50} height={50} className='headerLogo'/>
         Zavtra<br/>Bank
       </Link>
 

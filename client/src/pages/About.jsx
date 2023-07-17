@@ -21,7 +21,7 @@ const About = () => {
           <Link to='/leadership' className='aboutLeadership'>Leadership</Link>
         </div>
         <div className="aboutTitleSpaceImage">
-          <img src={aboutImg} aria-label="About image" />
+          <img src={aboutImg} width={750} height={500} alt="About image" />
         </div>
       </section>
 
@@ -38,7 +38,7 @@ const About = () => {
           <h2 className="aboutMissionsTitle">Our Missions</h2>
           <div className="aboutMissionOne">
             <div className="aboutMissionsImg">
-              <img src={ethic} aria-label="Zavtra Bank ethic" />
+              <img src={ethic} width={750} height={500} alt="Zavtra Bank ethic" />
             </div>
             <div className="aboutMissionsDescContainer">
               <h3 className="aboutMissionsDescTitle">Work ethic</h3>
@@ -49,7 +49,7 @@ const About = () => {
           </div>
           <div className="aboutMissionTwo">
             <div className="aboutMissionsImg">
-              <img src={focus} aria-label="Zavtra Bank ethic" />
+              <img src={focus} width={750} height={501} alt="Zavtra Bank ethic" />
             </div>
             <div className="aboutMissionsDescContainer">
               <h3 className="aboutMissionsDescTitle">Client focus</h3>
@@ -60,7 +60,7 @@ const About = () => {
           </div>
           <div className="aboutMissionOne">
             <div className="aboutMissionsImg">
-              <img src={drive2} aria-label="Zavtra Bank ethic" />
+              <img src={drive2} width={750} height={500} alt="Zavtra Bank ethic" />
             </div>
             <div className="aboutMissionsDescContainer">
               <h3 className="aboutMissionsDescTitle">Drive</h3>

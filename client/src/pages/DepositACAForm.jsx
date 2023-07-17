@@ -41,7 +41,7 @@ const DepositACAForm = () => {
         {/* HEADER */}
         <div className="documentHeading">
           <div className="documentHeadingUp">
-            <img src={logo} alt="Zavtra Bank logo" className="headerLogo" />
+            <img src={logo} alt="Zavtra Bank logo" width={50} height={50} className="headerLogo" />
             <div className="bankSlogan">
               <span className="bankSloganHeader">Zavtra Bank</span>
               <p className="bankSloganDesc">
