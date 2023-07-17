@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
 
   build: {
+    modulePreload: false,
     manifest: true,
     cssMinify: true,
     minify: true,
