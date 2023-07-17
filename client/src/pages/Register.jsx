@@ -1,7 +1,6 @@
 import {Formik, Field, Form, ErrorMessage} from 'formik'
 import * as Yup from 'yup'
 import {useNavigate} from 'react-router-dom'
-import {CgProfile} from 'react-icons/cg'
 import { Link } from 'react-router-dom'
 import {  toast } from 'react-toastify';
 import logo from '../assets/logo4.webp'
@@ -75,9 +74,6 @@ const Register = () => {
             (
               <Form className='registerForm'>
                 <legend className='registerLeftText'>
-                  <span className="registerLeftProfileLogo">
-                    <CgProfile />
-                  </span>
                   <h1 className="registerLeftTitle">
                     Create Account
                   </h1>

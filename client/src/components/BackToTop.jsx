@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import {BsFillArrowUpCircleFill} from 'react-icons/bs'
 import '../styles/components/BackToTop.css'
 
 const BackToTop = () => {
@@ -27,7 +26,9 @@ const BackToTop = () => {
     <div>
       {
         scrollToTop && (
-          <BsFillArrowUpCircleFill className='scrollBtn' onClick={scrollUp}/>
+          <div className='scrollBtn' onClick={scrollUp}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="#ececec" strokeLinecap="round" strokeLinejoin="round" strokeWidth="40" d="M112 244l144-144 144 144M256 120v292"/></svg>
+          </div>
         )
       }
     </div>

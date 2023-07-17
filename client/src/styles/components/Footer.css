@@ -39,17 +39,17 @@
   font-size: 25px;
 }
 
-.smediaF {
-  color: var(--facebook-color);
+.smediaF svg {
+  fill: var(--facebook-color);
 }
-.smediaT {
-  color: var(--twitter-color);
+.smediaT svg {
+  fill: var(--twitter-color);
 }
-.smediaI {
-  color: var(--instagram-color);
+.smediaI svg {
+  fill: var(--instagram-color);
 }
-.smediaL {
-  color: var(--linkedin-color);
+.smediaL svg {
+  fill: var(--linkedin-color);
 }
 
 .content-space-between {
@@ -80,10 +80,11 @@
 }
 
 .footerContactIcon {
-  font-size: 18px;
+  width: 18px;
+  height: 18px;
 }
+
 .footerContactText {
-  /* font-size: 22px; */
   font-weight: 400;
   color: var(--white-color);
   

@@ -107,11 +107,14 @@
 
   .menu-icon {
     display: block;
-    padding-top: 15px;
-    padding-right: 10px;
     font-size: 30px;
-    color: var(--secondary2-color);
     cursor: pointer;
+  }
+
+  .menu-icon svg {
+    fill: var(--secondary2-color);
+    stroke: var(--secondary2-color);
+    stroke-width: 20;
   }
 }
 

@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from 'react'
-import {IoIosArrowDown} from 'react-icons/io'
 import '../styles/components/Accordion.css'
 
 const Accordion = ({section, index}) => {
@@ -20,13 +19,17 @@ const Accordion = ({section, index}) => {
       >
         <div className="columnTitle">{section.title}</div>
         <button title='dropdown arrow ' className='expendableBtn'>
-          <span className="material-symbols-outlined" style={{
-            transform: `rotate(${isOpen ? 180 : 0}deg)`,
-            transition:'all 0.3s',
-            fontSize: '30px',
-          }}>
-            <IoIosArrowDown />
-          </span>
+            <svg 
+              style={{
+              transform: `rotate(${isOpen ? 180 : 0}deg)`,
+              transition:'all 0.3s',
+            }} 
+              xmlns="http://www.w3.org/2000/svg" 
+              height="30" 
+              viewBox="0 -960 960 960" 
+              width="30">
+              <path d="M480-345 240-585l43-43 197 198 197-197 43 43-240 239Z"/>
+            </svg>
         </button>
       </div>
 

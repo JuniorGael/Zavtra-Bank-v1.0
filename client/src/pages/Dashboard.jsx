@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { checkIsLogin } from "../state";
 import { toast } from "react-toastify";
-import { RiDeleteBin6Line } from "react-icons/ri";
+// import { RiDeleteBin6Line } from "react-icons/ri";
 import "../styles/pages/Dashboard.css";
 import Modal from "../components/Modal";
 
@@ -108,7 +108,7 @@ const Dashboard = () => {
             <th className="dashboardItemHead">Email</th>
             <th className="dashboardItemHead">Date</th>
             <th className="dashboardItemHead">
-              <RiDeleteBin6Line color="black" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/><path stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/></svg>
             </th>
           </tr>
         </thead>
@@ -123,9 +123,11 @@ const Dashboard = () => {
                 <td className="dashboardItem">{timestamp}</td>
                 <td className="dashboardItem">
                   {!user.admin && (
-                    <RiDeleteBin6Line className="deleteBtn"
+                    <div className="deleteBtn"
                       onClick={() => handleOpenModal(user.id)}
-                    />
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/><path stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeWidth="32" d="M80 112h352"/><path d="M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/></svg>
+                    </div>
                   )}
                 </td>
               </tr>

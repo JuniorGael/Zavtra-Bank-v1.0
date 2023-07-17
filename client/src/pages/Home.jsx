@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom'
-import {HiArrowSmRight} from 'react-icons/hi'
 import homeBanner from '../assets/bank2_1440.webp'
 import homeBannerSmall from '../assets/bank2_450.webp'
 import homeBannerMobile from '../assets/bank2_750.webp'
@@ -39,8 +38,8 @@ const Home = () => {
             src={homeBanner} 
             alt="home banner" 
             className='homeBannerImg' 
-            width={1900} 
-            height={1018}
+            width={1440} 
+            height={772}
           />
         </picture>
 
@@ -53,7 +52,7 @@ const Home = () => {
 
       <section className="loans">
         <div className="loansItems">
-          <img src={loan} aria-label="loan image" className='loanImg'/>
+          <img src={loan} width={100} height={100} alt="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">MONTHLY LOAN</h2>
             <p className="loansDesc">
@@ -62,7 +61,7 @@ const Home = () => {
           </div>
         </div>
         <div className="loansItems">
-          <img src={loan} aria-label="loan image" className='loanImg'/>
+          <img src={loan} width={100} height={100} alt="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">QUARTERLY LOAN</h2>
             <p className="loansDesc">
@@ -71,7 +70,7 @@ const Home = () => {
           </div>
         </div>
         <div className="loansItems">
-          <img src={loan} aria-label="loan image" className='loanImg'/>
+          <img src={loan} width={100} height={100} alt="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">SEMI-ANNUAL LOAN</h2>
             <p className="loansDesc">
@@ -80,7 +79,7 @@ const Home = () => {
           </div>
         </div>
         <div className="loansItems">
-          <img src={loan} aria-label="loan image" className='loanImg'/>
+          <img src={loan} width={100} height={100} alt="loan image" className='loanImg'/>
           <div className="loansItem">
             <h2 className="loansTitle">ANNUAL LOAN</h2>
             <p className="loansDesc">
@@ -104,7 +103,7 @@ const Home = () => {
           <div className="bankProcedureText">
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <HiArrowSmRight />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               
               <span className="bankprocedureDesc">
@@ -113,7 +112,7 @@ const Home = () => {
             </div>
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <HiArrowSmRight />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               <span className="bankprocedureDesc">
                 Download the loan form and fill it
@@ -121,7 +120,7 @@ const Home = () => {
             </div>
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <HiArrowSmRight />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               <span className="bankprocedureDesc">
               <Link to='/login' className='linkTo'>Log in</Link> to     your account and submit a form
@@ -129,7 +128,7 @@ const Home = () => {
             </div>
             <div className="bankprocedureItems">
               <div className="arrowContainer">
-                <HiArrowSmRight />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="36" d="M268 112l144 144-144 144M392 256H100"/></svg>
               </div>
               <span className="bankprocedureDesc">
                 Our administrators respond to you ASAP

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-import {FaBars, FaTimes} from 'react-icons/fa'
 import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../assets/logo4.webp'
@@ -54,7 +53,11 @@ const Header = () => {
       </Link>
 
       <div className={`menu-icon ${isOpen && 'open'}`} onClick={handleClick}>
-        {isOpen ? <FaTimes /> : <FaBars />}
+        {isOpen ? 
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="m249-207-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+          : 
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 -960 960 960" width="48"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+        }
       </div>
 
       <div className={`header-menu ${isOpen && 'open'}`}>
