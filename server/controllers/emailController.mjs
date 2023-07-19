@@ -45,14 +45,14 @@ export const sendEmail = (req, res) => {
       </noscript> 
   <![endif]-->
 </head>
-<body style="margin:0; padding:0; font-size:18px; font-family: Arial,sans-serif;">
-  <header style="background-color: #ececec; padding:1rem">
-    <h2 style="text-transform: capitalize;">Subject: ${subject}</h1>
-    <h2 style="text-transform: capitalize;">From: ${username}</h2>
-    <h2 style="text-transform: capitalize;">Email: <a style="text-transform: lowercase;" href="mailto:${email}">${email}</a></p>
+<body style="margin:0; padding:0; font-size:18px; font-family:Arial,sans-serif;">
+  <header style="background-color:#ececec; padding:1rem">
+    <h2 style="text-transform:capitalize;">Subject: ${subject}</h1>
+    <h2 style="text-transform:capitalize;">From: ${username}</h2>
+    <h2 style="text-transform:capitalize;">Email: <a style="text-transform:lowercase;" href="mailto:${email}">${email}</a></p>
   </header>
-	<main style="line-height: 2; padding: 2rem 4rem; text-align: justify;">
-    <p>${message}</p>
+	<main>
+    <p style="line-height:2; padding:2rem 4rem; text-align:justify;">${message}</p>
   </main>
 </body>
 </html>`;
