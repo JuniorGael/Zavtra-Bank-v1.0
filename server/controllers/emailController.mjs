@@ -16,7 +16,6 @@ if (process.env.NODE_ENV === "production") {
       pass: process.env.NODEJSMAILERPASSWORD,
     },
   });
-  console.log(transporter);
 } else {
   transporter = nodemailer.createTransport({
     host: "localhost",
