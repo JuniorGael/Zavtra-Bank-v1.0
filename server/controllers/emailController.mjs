@@ -12,10 +12,11 @@ if (process.env.NODE_ENV === "production") {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.NODEJSMAILERUSER,  // celui qui recoit les messages
+      user: process.env.NODEJSMAILERUSER, // celui qui recoit les messages
       pass: process.env.NODEJSMAILERPASSWORD,
     },
   });
+  console.log(transporter);
 } else {
   transporter = nodemailer.createTransport({
     host: "localhost",
@@ -27,14 +28,44 @@ if (process.env.NODE_ENV === "production") {
 
 export const sendEmail = (req, res) => {
   const { username, email, subject, message } = req.body;
-  console.log(req.body);
+
+  const htmlTemplate = `<!DOCTYPE html>
+  <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width,initial-scale=1">
+	  <meta name="x-apple-disable-message-reformatting">
+	  <title>${subject}</title>
+	  <!--[if mso]> 
+      <noscript> 
+        <xml> 
+          <o:OfficeDocumentSettings> 
+          <o:PixelsPerInch>96</o:PixelsPerInch> 
+          </o:OfficeDocumentSettings> 
+        </xml> 
+      </noscript> 
+  <![endif]-->
+</head>
+<body style="margin:0; padding:0; font-size:18px; font-family: Arial,sans-serif;">
+  <header style="background-color: #ececec; padding:1rem">
+    <h2 style="text-transform: capitalize;">Subject: ${subject}</h1>
+    <h2 style="text-transform: capitalize;">From: ${username}</h2>
+    <h2 style="text-transform: capitalize;">Email: <a style="text-transform: lowercase;" href="mailto:${email}">${email}</a></p>
+  </header>
+	<main style="line-height: 2; padding: 2rem 4rem; text-align: justify;">
+    <p>${message}</p>
+  </main>
+</body>
+</html>`;
 
   const mailOptions = {
-    from: `${username}<${email}>`, // celui qui envoit les messages
+    from: email, // celui qui envoit les messages
     to: process.env.NODEJSMAILERUSER,
     subject: subject,
     text: message,
+    html: htmlTemplate,
   };
+
 
   transporter.sendMail(mailOptions, (error) => {
     if (error) {

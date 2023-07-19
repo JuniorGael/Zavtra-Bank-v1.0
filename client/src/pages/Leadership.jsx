@@ -15,9 +15,9 @@ const Leadership = () => {
 
       <div className="leadContainer">
         {
-          leaderData.map((item) => (
+          leaderData && leaderData.map((item) => (
             <section key={item.id} className="LeadAuthor">
-              <img src={item.leadImage} alt="leadership Team image" className="leadAuthorImg"/>
+              <img src={item.leadImage} width={300} height={300} alt="leadership Team image" className="leadAuthorImg"/>
               <h2 className="leadAuthorName">{item.leadName}</h2>
               <span className="leadAuthorPos">{item.leadPosition}</span>
             </section>
