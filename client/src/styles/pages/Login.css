@@ -106,7 +106,6 @@
 
 .rightSideFieldControl:focus {
     outline: none;
-    border: none;
 }
 
 .rightSideForgotPassword {

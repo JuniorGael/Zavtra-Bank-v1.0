@@ -28,12 +28,20 @@ const Register = () => {
     .required('username is required'),
     email: Yup.string().email('Invalid email').required('email required'),
     password: Yup.string()
-    .min(7, 'Not Strong Password!')
+    .min(6, 'Not Strong Password!')
     .max(20, 'Strong Password!')
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/,
+      'Must contain at least one lowercase letter, one uppercase letter, one number, and one special character'
+    )
     .required('password required'),
     confirmPassword: Yup.string()
-    .oneOf([Yup.ref('password'), null], "Password don't match")
-    .required(),
+    .oneOf([Yup.ref('password'), null], "Passwords must match")
+    .matches(
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/,
+      'Must contain at least one lowercase letter, one uppercase letter, one number, and one special character'
+    )
+    .required('Please confirm your password'),
     policyTerms: Yup.boolean().oneOf([true], 'Please accept the terms of service!')
   })
 
