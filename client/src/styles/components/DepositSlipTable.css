@@ -35,4 +35,9 @@
   .amountField {
     width: 100%;
   }
+  
+  .slipItem {
+    font-size: 14px;
+    
+  }
 }

@@ -1,245 +1,264 @@
 .register {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .registerWrapper {
-    display: flex;
-    gap: 40px;
-    margin: 40px;
+  display: flex;
+  gap: 40px;
+  margin: 40px;
 }
 
 .registerLeft {
-    max-width: 600px;
-    width: 100%;
-    border: 2px solid var(--black-color);
+  max-width: 600px;
+  width: 100%;
+  border: 2px solid var(--black-color);
 }
 
 .registerForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 25px 0px;
-    background-color: var(--white-color);
-    letter-spacing: 0.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0px;
+  background-color: var(--white-color);
+  letter-spacing: 0.2px;
 }
 
 .registerLeftText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .registerLeftProfileLogo {
-    font-size: 50px;
-    font-weight: 300;
-    color: var(--secondary2-color);
+  font-size: 50px;
+  font-weight: 300;
+  color: var(--secondary2-color);
 }
 
 .registerLeftTitle {
-    font-size: 40px;
-    font-weight: 500;
-    margin-bottom: 10px;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .registerLeftBankLogo {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
 .registerLeftLogo {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 
 .registerLeftLogoTitle {
-    font-size: 17px;
-    font-weight: 500;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .registerLeftFormField {
-    width: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 20px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .registerLeftFormTitle {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .registerLeftControl {
-    height: 40px;
-    font-size: 16px;
-    padding-left: 5px;
-    border-radius: 10px;
-    background: transparent;
-    border: 2px solid var(--secondary2-color);
+  height: 40px;
+  font-size: 16px;
+  padding-left: 5px;
+  border-radius: 10px;
+  background: transparent;
+  border: 2px solid var(--secondary2-color);
 }
 
 .registerLeftControl:focus {
-    outline: none;
+  outline: none;
 }
 
 .form-label {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-danger {
-    color: red;
-    font-size: 15px;
-    padding-left: 5px;
+  color: red;
+  font-size: 15px;
+  padding-left: 5px;
+}
+
+.showPasswordIcon {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+	top: 32px;
+  right: 10px;
 }
 
 .registerLeftPrivacyTerms {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
 }
 
 .registerLeftTermsText {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 10px;
-    font-weight: normal;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
 }
 
 .checkboxForm {
-    display: flex;
-    flex-direction: column;
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 .Btn {
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--white-color);
-    background-color: var(--secondary2-color);
-    cursor: pointer;
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--white-color);
+  background-color: var(--secondary2-color);
+  cursor: pointer;
 }
 
 .Btn:hover {
-    color: var(--secondary2-color);
-    background-color: var(--white-color);
+  color: var(--secondary2-color);
+  background-color: var(--white-color);
 }
 
 .registerAlreadyAccount {
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .loginHere {
-    font-weight: 600;
-    padding-left: 5px;
+  font-weight: 600;
+  padding-left: 5px;
 }
 
 .loginHere:hover {
-    color: var(--secondary2-color);
-    text-decoration: underline;
+  color: var(--secondary2-color);
+  text-decoration: underline;
 }
 
 .registerRight {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .registerRightBankSlogan {
-    font-size: 70px;
-    font-weight: 500;
-    line-height: 70px;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 70px;
 }
 
 @media screen and (max-width: 768px) {
-    .registerWrapper {
-        gap: 40px;
-        margin: 20px 10px;
-    }
-    
-    .registerForm {
-        padding: 40px 10px;
-    }
+  .registerWrapper {
+    gap: 40px;
+    margin: 20px 10px;
+  }
 
-    .registerLeftTitle {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
+  .registerForm {
+    padding: 40px 10px;
+  }
 
-    .registerLeftLogoTitle {
-        font-size: 15px;
-    }
+  .registerLeftTitle {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
 
-    .registerLeftFormField {
-        width: 100%;
-    }
+  .registerLeftLogoTitle {
+    font-size: 15px;
+  }
 
-    .registerLeftFormTitle, 
-    .registerLeftControl,
-    .registerLeftPrivacyTerms,
-    .text-danger,
-    .registerAlreadyAccount {
-        font-size: 12px;
-    }
+  .registerLeftFormField {
+    width: 100%;
+  }
 
-    .registerLeftPrivacyTerms {
-        line-height: 1.1;
-    }
+	.showPasswordIcon {
+		width: 20px;
+		height: 20px;
+		top: 28px;
+	}
 
+  .registerLeftFormTitle,
+  .registerLeftControl,
+  .registerLeftPrivacyTerms,
+  .text-danger,
+  .registerAlreadyAccount {
+    font-size: 12px;
+  }
 
+  .registerLeftPrivacyTerms {
+    line-height: 1.1;
+  }
 
-    /* =========================== */
-    .registerRight {
-        display: none;
-    }
+  /* =========================== */
+  .registerRight {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 992px) {
-    .registerWrapper {
-        gap: 40px;
-        margin: 20px 10px;
-    }
-    
-    .registerForm {
-        padding: 40px 10px;
-    }
+  .registerWrapper {
+    gap: 40px;
+    margin: 20px 10px;
+  }
 
-    .registerLeftTitle {
-        font-size: 28px;
-        margin-bottom: 10px;
-    }
+  .registerForm {
+    padding: 40px 10px;
+  }
 
-    .registerLeftLogoTitle {
-        font-size: 15px;
-    }
+  .registerLeftTitle {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
 
-    .registerLeftFormField {
-        width: 100%;
-    }
+  .registerLeftLogoTitle {
+    font-size: 15px;
+  }
 
-    .registerLeftFormTitle, 
-    .registerLeftControl,
-    .registerLeftPrivacyTerms,
-    .text-danger,
-    .registerAlreadyAccount {
-        font-size: 14px;
-    }
+  .registerLeftFormField {
+    width: 100%;
+  }
 
-    .registerLeftPrivacyTerms {
-        line-height: 1.1;
-    }
+	.showPasswordIcon {
+		width: 22px;
+		height: 22px;
+	}
 
-    /* ========================== */
-    .registerRightBankSlogan, .registerRightLogin {
-        font-size: 45px;
-        line-height: 45px;
-    }
+  .registerLeftFormTitle,
+  .registerLeftControl,
+  .registerLeftPrivacyTerms,
+  .text-danger,
+  .registerAlreadyAccount {
+    font-size: 14px;
+  }
+
+  .registerLeftPrivacyTerms {
+    line-height: 1.1;
+  }
+
+  /* ========================== */
+  .registerRightBankSlogan,
+  .registerRightLogin {
+    font-size: 45px;
+    line-height: 45px;
+  }
 }

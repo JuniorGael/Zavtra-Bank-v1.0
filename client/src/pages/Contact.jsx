@@ -5,6 +5,7 @@ import phone from '../assets/phone.webp'
 import contactImg from '../assets/contactimg.webp'
 import '../styles/pages/Contact.css'
 import {toast} from "react-toastify"
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   document.title = 'Contact Customer Service - Zavtra Bank';
@@ -69,9 +70,18 @@ const Contact = () => {
           <img src={phone} aria-label="contact tchat" className='contactTchatImg'/>
           <div className="contactOnlineText">
             <div className="contactItems">
-              <p className="contactNber">+7 (950) 229-46-42</p>
+              <Link to='tel: +7 (950) 229-46-42'  className="contactNber">
+                +7 (950) 229-46-42
+              </Link>
+              <Link to="tel: +7 (904) 554-19-61" className="contactNber">
+                +7 (904) 554-19-61
+              </Link>
+              <Link to="tel: +234 (654) 54 88 65" className="contactNber">
+                +234 (654) 54 88 65
+              </Link>
+              {/* <p className="contactNber">+7 (950) 229-46-42</p>
               <p className="contactNber">+7 (904) 554-19-61</p>
-              <p className="contactNber">+234 (654) 54 88 65</p>
+              <p className="contactNber">+234 (654) 54 88 65</p> */}
             </div>
           </div>
         </div>

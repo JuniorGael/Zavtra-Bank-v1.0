@@ -17,7 +17,7 @@
   align-items: center;
   border: 2px solid var(--black-color);
   background: #fff;
-  margin: 15px auto;
+  margin: 50px auto 15px;
   padding: 20px;
   letter-spacing: 1.5px;
   font-size: 14px;
@@ -175,17 +175,6 @@
 
 /* =============================================== BODY FIN===================================================== */
 
-.depositTitles {
-  margin-top: 30px;
-  text-align: center;
-  line-height: 40px;
-}
-
-.doctitle {
-  text-align: center;
-  font-size: 25px;
-}
-
 .docsubtitle {
   font-size: 20px;
 }
@@ -288,6 +277,8 @@
 @media screen and (max-width: 768px) {
   .documentWrapper {
     padding: 10px;
+    /* margin: 40px 10px 10px; */
+    margin-inline: 10px;
   }
 
   .documentHeadingUp {
@@ -306,7 +297,8 @@
   }
 
   .titleItem {
-    font-size: 24px;
+    font-size: 20px;
+    text-align: center;
   }
 
   .form .user {
@@ -387,5 +379,11 @@
 
   .authors span:nth-child(2) {
     margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .documentWrapper {
+    margin-inline: 10px;
   }
 }
