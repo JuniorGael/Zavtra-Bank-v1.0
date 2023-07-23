@@ -359,7 +359,7 @@
     ]
   },
   "index.css": {
-    "file": "assets/index-c0244afd.css",
+    "file": "assets/index-f7428cec.css",
     "src": "index.css"
   },
   "index.html": {
@@ -380,9 +380,9 @@
       "assets/Poppins-Bold-7219547e.ttf"
     ],
     "css": [
-      "assets/index-c0244afd.css"
+      "assets/index-f7428cec.css"
     ],
-    "file": "assets/index-712e891f.js",
+    "file": "assets/index-3301beee.js",
     "imports": [
       "_@react-pdf-99b9f2c7.js",
       "_react-e5b2bc4a.js",
