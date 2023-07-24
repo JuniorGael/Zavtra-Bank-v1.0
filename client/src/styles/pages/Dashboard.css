@@ -43,7 +43,7 @@
 .dashboardItemHead,
 .dashboardItem {
   padding: 5px 10px;
-  width: 40px;
+  width: 30px;
   font-size: 18px;
   text-align: center;
   flex: none;
@@ -52,14 +52,15 @@
 
 .dashboardItem:nth-child(5) {
   color: red;
-  font-size: 22px;
 }
+
 
 .deleteBtn {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 580px) {
   .dashboardTitle {
     font-size: 20px;
     margin-bottom: 5px;
@@ -67,9 +68,6 @@
 
   .totalUserTitle,
   .totalUserNber {
-    font-size: 18px;
-  }
-  .deleteBtn {
     font-size: 18px;
   }
 
@@ -83,5 +81,26 @@
     padding: 3px;
     font-size: 14px;
     flex: none;
+  }
+  
+  .dashboardItemHead:nth-child(5),
+  .dashboardItem:nth-child(5) {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 581px) and (max-width: 992px) {
+  .dashboardItemHead,
+  .dashboardItem {
+    padding: 3px;
+    font-size: 14px;
+    flex: none;
+  }
+  
+  .dashboardItemHead:nth-child(5),
+  .dashboardItem:nth-child(5) {
+    width: 20px;
+    height: 20px;
   }
 }
